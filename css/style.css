@@ -313,7 +313,7 @@ template {
     color: #ffffff; }
 
 .container {
-  min-width: 1256px;
+  max-width: 1256px;
   margin: auto; }
 
 .header {
