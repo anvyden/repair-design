@@ -372,6 +372,7 @@ template {
 }
 
 .header {
+  position: fixed;
   background-color: #131313;
   padding: 24px 0;
 }
@@ -428,7 +429,7 @@ template {
   text-transform: uppercase;
   text-decoration: none;
   color: #E3B873;
-  tranfrom: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .title {
