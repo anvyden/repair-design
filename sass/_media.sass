@@ -1,6 +1,21 @@
-@media screen and ( max-width: 1200px )
+@media screen and ( min-width: 1440px )
+  .container
+    width: 90%
+    max-width: 1274px
+  .contacts
+    &__phone
+      margin-left: 1rem
+      margin-right: 3rem
+    &__button
+      margin-right: 1.35rem
+@media screen and ( max-width: 1439px )
+  .container
+    width: 87%
+@media screen and ( max-width: 1240px )
   html
     font-size: 12px
+  .container
+    width: 85%
   .nav
     &__item
       margin-right: 1rem
@@ -17,6 +32,9 @@
     &__content
       margin-left: 0
 @media screen and ( max-width: 570px )
+  .container
+    width: 100%
+    max-width: 339px
   .contacts
     &__phone
       margin-right: 0
@@ -35,14 +53,17 @@
     &__text
       max-width: 26.5rem
       font-size: 1.5rem
-      margin-bottom: 2.286rem
+      margin-bottom: 2.8rem
     &__button
       display: block
       width: 100%
       min-width: 22.5rem
-      max-width: 27rem
-      margin-bottom: 1.857rem
+      max-width: 28.5rem
+      margin-bottom: 2.2rem
       font-size: 1.1rem
+  .button
+    &--outline
+      padding: 17px 42px
 @media screen and ( max-height: 530px )
   .hero
     &__scroll-down
