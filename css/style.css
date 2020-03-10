@@ -612,18 +612,9 @@ body {
   }
 }
 
-@media screen and (max-width: 1439px) {
-  .container {
-    width: 87%;
-  }
-}
-
 @media screen and (max-width: 1240px) {
   html {
     font-size: 12px;
-  }
-  .container {
-    width: 85%;
   }
   .nav__item {
     margin-right: 1rem;
@@ -648,8 +639,7 @@ body {
 
 @media screen and (max-width: 570px) {
   .container {
-    width: 100%;
-    max-width: 339px;
+    width: 90%;
   }
   .contacts__phone {
     margin-right: 0;
