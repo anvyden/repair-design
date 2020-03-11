@@ -1,13 +1,13 @@
 @media screen and ( min-width: 1440px )
-  .container
-    width: 90%
-    max-width: 1274px
-  .contacts
-    &__phone
-      margin-left: 1rem
-      margin-right: 3rem
-    &__button
-      margin-right: 1.35rem
+  // .container
+  //   width: 90%
+  //   max-width: 1274px
+  // .contacts
+  //   &__phone
+  //     margin-left: 2.2rem
+      // margin-right: 3rem
+    // &__button
+    //   margin-right: 1.35rem
 @media screen and ( max-width: 1240px )
   html
     font-size: 12px
@@ -32,10 +32,24 @@
     align-items: center
   .types
     &__card
-      margin-bottom: 4.917rem
+      margin-bottom: 5rem
   .card
     &__text
       margin-left: 0
+  .design
+    background: $lightDark
+    &__heading
+      color: $light
+    &__text
+      color: $light
+    &__card
+      margin-bottom: 5rem
+  .section
+    &-title
+      &__text
+        max-width: 300px
+        font-size: 1.25rem
+        line-height: 135.84%
 @media screen and ( max-width: 570px )
   .container
     width: 90%
@@ -68,6 +82,40 @@
   .button
     &--outline
       padding: 17px 42px
+  .section
+    &-title
+      &__heading
+        font-size: 1.85rem
+      &__image
+        margin-bottom: 3.1rem
+      &__text
+        margin-bottom: 3.1rem
+  .card
+    &__text
+      max-width: 22.4rem
+      margin-top: -11.8rem
+      padding: 1.79rem 2.4rem 1.79rem 2.4rem
+    &__title
+      font-size: 1.26rem
+    &__item
+      line-height: 1.9rem
+    &__list
+      margin-bottom: 1.55rem
+    &__pricetag
+      padding: 1rem 2.4rem
+      &--size-lg
+        padding: 1rem 3.8rem
+  .types
+    &__card
+      margin-bottom: 6.5rem
+  .design
+    &__image
+      margin-bottom: 0.3rem
+    &__card
+      margin-bottom: 6.8rem
+    &-card
+      &__text
+        padding: 1.75rem 2.4rem
 @media screen and ( max-height: 530px )
   .hero
     &__scroll-down

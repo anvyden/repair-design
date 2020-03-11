@@ -417,6 +417,10 @@ img {
   font-family: 'Yeseva One', cursive;
 }
 
+.section-title__heading {
+  font-size: 1.429rem;
+}
+
 .section-title__image {
   display: flex;
   align-items: center;
@@ -429,6 +433,17 @@ img {
   height: 2px;
   background-color: #E3B873;
   margin: 0 10px;
+}
+
+.section-title__text {
+  display: inline-block;
+  max-width: 53.571rem;
+  margin: 1.3rem 0 3.22rem 0;
+  text-align: center;
+  font-family: 'Futura Book', sans-serif;
+  font-size: 1.429rem;
+  line-height: 1.929rem;
+  text-transform: none;
 }
 
 .header {
@@ -477,6 +492,7 @@ img {
 
 .contacts__phone {
   margin-right: 3.25rem;
+  margin-left: 1rem;
 }
 
 .contacts__button {
@@ -641,7 +657,7 @@ img {
   padding: 0 0 0 1rem;
   margin: 0;
   font-size: 1.07rem;
-  line-height: 1.786rem;
+  line-height: 1.82rem;
   color: #959595;
   margin-bottom: 2.5rem;
 }
@@ -656,20 +672,24 @@ img {
   background-color: #E3B873;
   color: #ffffff;
   padding: 1.214rem 2.6rem;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
 }
 
-@media screen and (min-width: 1440px) {
-  .container {
-    width: 90%;
-    max-width: 1274px;
-  }
-  .contacts__phone {
-    margin-left: 1rem;
-    margin-right: 3rem;
-  }
-  .contacts__button {
-    margin-right: 1.35rem;
-  }
+.card__pricetag--size-lg {
+  padding: 1.214rem 5.5rem 1.214rem 2.4rem;
+}
+
+.design {
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff 52.5%, #131313 47.5%);
+}
+
+.design__section-title {
+  position: relative;
+}
+
+.design__card {
+  position: relative;
 }
 
 @media screen and (max-width: 1240px) {
@@ -703,10 +723,27 @@ img {
     align-items: center;
   }
   .types__card {
-    margin-bottom: 4.917rem;
+    margin-bottom: 5rem;
   }
   .card__text {
     margin-left: 0;
+  }
+  .design {
+    background: #252525;
+  }
+  .design__heading {
+    color: #ffffff;
+  }
+  .design__text {
+    color: #ffffff;
+  }
+  .design__card {
+    margin-bottom: 5rem;
+  }
+  .section-title__text {
+    max-width: 300px;
+    font-size: 1.25rem;
+    line-height: 135.84%;
   }
 }
 
@@ -747,6 +784,47 @@ img {
   }
   .button--outline {
     padding: 17px 42px;
+  }
+  .section-title__heading {
+    font-size: 1.85rem;
+  }
+  .section-title__image {
+    margin-bottom: 3.1rem;
+  }
+  .section-title__text {
+    margin-bottom: 3.1rem;
+  }
+  .card__text {
+    max-width: 22.4rem;
+    margin-top: -11.8rem;
+    padding: 1.79rem 2.4rem 1.79rem 2.4rem;
+  }
+  .card__title {
+    font-size: 1.26rem;
+  }
+  .card__item {
+    line-height: 1.9rem;
+  }
+  .card__list {
+    margin-bottom: 1.55rem;
+  }
+  .card__pricetag {
+    padding: 1rem 2.4rem;
+  }
+  .card__pricetag--size-lg {
+    padding: 1rem 3.8rem;
+  }
+  .types__card {
+    margin-bottom: 6.5rem;
+  }
+  .design__image {
+    margin-bottom: 0.3rem;
+  }
+  .design__card {
+    margin-bottom: 6.8rem;
+  }
+  .design-card__text {
+    padding: 1.75rem 2.4rem;
   }
 }
 
