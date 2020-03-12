@@ -50,4 +50,14 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
   
+  $(document).scroll(function() {
+    if ($(this).scrollTop() > 30) {
+      if($('.button-up').is(':hidden')) {
+        $('.button-up').css({opacity : 1}).fadeIn('slow');
+      }
+    } else { $('.button-up').stop(true, false).fadeOut('fast'); }
+  });
+  $('.button-up').click(function() {
+    $('html, body').stop().animate({scrollTop : 0}, 700);
+  });
 });
