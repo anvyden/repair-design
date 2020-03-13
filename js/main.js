@@ -60,4 +60,26 @@ $(document).ready(function () {
   $('.button-up').click(function() {
     $('html, body').stop().animate({scrollTop : 0}, 700);
   });
+
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+  var bullet = $('.swiper-pagination.bullet')
+
+  next.css('left', prev.width() + 20 + bullets.width() + 20)
+  bullets.css('left', prev.width() + 20)
+
 });

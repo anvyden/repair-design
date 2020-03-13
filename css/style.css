@@ -493,6 +493,36 @@ template {
   margin: auto;
 }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.row--center {
+  align-items: center;
+}
+
+.col {
+  flex-basis: 32%;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+.col-40--left {
+  padding-left: 0.8rem;
+}
+
+.col-60 {
+  width: 60%;
+}
+
+.col-60--top {
+  padding-top: 0.2rem;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -514,14 +544,48 @@ img {
   padding: 60px 0;
 }
 
+.section--dark {
+  background-color: #131313;
+  color: #ffffff;
+}
+
 .section-title {
   text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive;
+}
+
+.section-title--left {
+  text-align: left;
 }
 
 .section-title__heading {
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
   font-size: 1.429rem;
+  line-height: 138.6%;
+  margin: 0;
+}
+
+.section-title__heading--primary {
+  color: #E3B873;
+}
+
+.section-title__word {
+  display: flex;
+  align-items: center;
+}
+
+.section-title__word::after {
+  content: '';
+  width: 6.607rem;
+  height: 0.143rem;
+  background-color: #E3B873;
+  margin-left: 2.43rem;
+}
+
+.section-title__text {
+  font-size: 1.286rem;
+  line-height: 2.07rem;
+  max-width: 31.57rem;
 }
 
 .section-title__image {
@@ -536,17 +600,6 @@ img {
   height: 2px;
   background-color: #E3B873;
   margin: 0 10px;
-}
-
-.section-title__text {
-  display: inline-block;
-  max-width: 53.571rem;
-  margin: 1.3rem 0 3.22rem 0;
-  text-align: center;
-  font-family: 'Futura Book', sans-serif;
-  font-size: 1.429rem;
-  line-height: 1.929rem;
-  text-transform: none;
 }
 
 .header {
@@ -624,6 +677,17 @@ img {
   background-color: rgba(19, 19, 19, 0.7);
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3.47rem;
+  background-color: #131313;
+}
+
 .hero__content {
   position: relative;
   max-width: 47.857rem;
@@ -658,6 +722,7 @@ img {
 
 .hero__scroll-down {
   position: absolute;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -725,18 +790,104 @@ img {
   padding: 18px 42px;
 }
 
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.swiper-slide--right {
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.65rem;
+}
+
+.swiper-slide__text {
+  flex-basis: 38.5%;
+  margin-bottom: 2.7rem;
+}
+
+.swiper-slide__text:nth-child(odd) {
+  margin-right: 0.03rem;
+}
+
+.swiper-slide__text:last-of-type {
+  margin-bottom: 7.25rem;
+}
+
+.swiper-slide__heading {
+  font-size: 1.285rem;
+  line-height: 1.78rem;
+  font-family: 'Yeseva one', cursive;
+  color: #E3B873;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 0.643rem;
+}
+
+.swiper-slide__value {
+  display: block;
+  font-size: 1.071rem;
+  line-height: 1.2rem;
+}
+
+.swiper-slide__value--margin {
+  margin-bottom: 0.3rem;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+  background: url("../img/arrow-prev.svg") no-repeat center;
+}
+
+.swiper-button-next {
+  background: url("../img/arrow-next.svg") no-repeat center;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -1.05px;
+}
+
+.projects__title {
+  font-size: 1.929rem;
+  line-height: 2.643rem;
+  letter-spacing: -0.07em;
+  margin-bottom: 1.68rem;
+}
+
+.projects__text {
+  margin: 0;
+  margin-bottom: 3.4rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8.5px;
+}
+
 .types__section-title {
   margin-bottom: 2rem;
-}
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.col {
-  flex-basis: 32%;
 }
 
 .card__text {
@@ -793,6 +944,15 @@ img {
 
 .design__card {
   position: relative;
+}
+
+.design__text {
+  display: inline-block;
+  max-width: 53.571rem;
+  margin: 1.3rem 0 3.22rem 0;
+  text-align: center;
+  font-size: 1.429rem;
+  line-height: 1.929rem;
 }
 
 .modal {
@@ -878,9 +1038,15 @@ img {
     margin-left: 0;
     margin-right: 2rem;
   }
+  .swiper-slide__heading {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  html {
+    font-size: 11px;
+  }
   .nav {
     display: none;
   }
@@ -890,12 +1056,47 @@ img {
   .hero__content {
     margin-left: 0;
   }
+  .projects__text {
+    max-width: 24.18rem;
+    margin-bottom: 1.8rem;
+    margin-right: 0.5rem;
+  }
+  .swiper-slide__text {
+    margin-bottom: 1.2rem;
+  }
+  .swiper-slide__text:last-of-type {
+    margin-bottom: 3.2rem;
+  }
+  .card__title {
+    max-width: 14.55rem;
+  }
 }
 
 @media screen and (max-width: 760px) {
   .row {
     flex-direction: column;
     align-items: center;
+  }
+  .col-40 {
+    width: 50%;
+  }
+  .section-title__heading {
+    text-align: center;
+  }
+  .section-title__text {
+    text-align: center;
+  }
+  .section-title__word {
+    justify-content: center;
+  }
+  .section-title__word::after {
+    display: none;
+  }
+  .projects__text {
+    max-width: 35rem;
+  }
+  .swiper-slide {
+    flex-basis: 90%;
   }
   .types__card {
     margin-bottom: 5rem;
@@ -911,14 +1112,12 @@ img {
   }
   .design__text {
     color: #ffffff;
-  }
-  .design__card {
-    margin-bottom: 5rem;
-  }
-  .section-title__text {
     max-width: 300px;
     font-size: 1.25rem;
     line-height: 135.84%;
+  }
+  .design__card {
+    margin-bottom: 5rem;
   }
 }
 
@@ -966,9 +1165,6 @@ img {
   .section-title__image {
     margin-bottom: 3.1rem;
   }
-  .section-title__text {
-    margin-bottom: 3.1rem;
-  }
   .card__text {
     max-width: 22.4rem;
     margin-top: -11.8rem;
@@ -997,6 +1193,9 @@ img {
   }
   .design__card {
     margin-bottom: 6.8rem;
+  }
+  .design__text {
+    margin-bottom: 3.1rem;
   }
   .design-card__text {
     padding: 1.75rem 2.4rem;
