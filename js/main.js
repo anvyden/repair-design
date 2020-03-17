@@ -117,4 +117,18 @@ $(document).ready(function () {
     bullets.css('left', positionPrev.left + prev.width() + 20)
     next.css('left', positionPrev.left + prev.width() + 20 + bullets.width() + 20)
 
+    new WOW().init();
+
+    // animation visibility
+
+    var typesCard = $('.types__card');
+    var typesHeight = $('.header').height() + $(".hero").height() + $('.projects').height()
+      + $('.control').height() - 200;
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() >= typesHeight && $(window).width() >= 760)
+      typesCard.addClass("animation-fade-up");
+    });
+
+
 });

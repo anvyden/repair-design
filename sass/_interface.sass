@@ -5,6 +5,7 @@
   text-transform: uppercase
   font-size: 0.93rem
   font-family: 'Futura Demi', sans-serif
+  outline: none
   &:hover
     cursor: pointer
   &--primary
@@ -29,12 +30,14 @@
   background-color: transparent
   border: none
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  outline: none
   font-size: 1.286rem
   line-height: 1.786rem
   color: $light
   padding: 0 0 0.5rem 0
-  &::placeholder
-    color: $light
+  &--light
+    &::placeholder
+      color: $light
 .policy
   font-size: 1.143rem
   &__checkbox

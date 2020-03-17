@@ -57,18 +57,19 @@
   .col
     &-40
       width: 100%
+      max-width: 35rem
       &--left
         padding: 0
     &-60
       width: 100%
+      margin-top: 2.7rem
+      max-width: 35rem
+      &--top
+        padding: 0
   .swiper
-    &-button
-      &-prev     
-        left: 25%
     &-slide
       &-img
         img
-          max-height: 25rem
       &--right
         padding: 0
         justify-content: center
@@ -76,8 +77,6 @@
         flex-basis: 47%
         width: 50%
         margin-bottom: 2.2rem
-        &:nth-child(-n+2)
-          margin-top: 2.763rem
         &:last-of-type
           margin-bottom: 4.65rem
       &__heading
@@ -87,27 +86,6 @@
       &__value
         font-size: 1.166rem
         line-height: 1.583rem
-    &-container
-      &--mobile
-        max-width: 35.5rem
-  .projects
-    &__row
-      flex-wrap: nowrap
-      min-height: 54.083rem
-    &__col-40
-      &--order
-        order: 1
-    &__title
-      font-size: 1.833rem
-      line-height: 2.5rem
-      letter-spacing: -0.07em
-      margin-bottom: 2rem
-    &__text
-      margin: 0 auto
-      font-size: 1.166rem
-      line-height: 1.917rem
-      margin-bottom: 2.85rem
-      max-width: 35rem
   .section
     &-title
       &__heading
@@ -115,9 +93,50 @@
       &__text
         text-align: center
       &__word
-        justify-content: center
         &::after
           display: none
+  .projects
+    &__title
+      font-size: 1.833rem
+      line-height: 2.5rem
+      letter-spacing: -0.07em
+      margin-bottom: 2rem
+      text-align: left
+    &__text
+      font-size: 1.166rem
+      line-height: 1.917rem
+      margin-bottom: 2rem
+      max-width: 35rem
+      text-align: left
+  .control
+    &__form
+      max-width: 44.55rem
+      flex-direction: column
+    &__label
+      font-size: 1.25rem
+      line-height: 1.666rem
+      margin-bottom: 0
+    &__input
+      font-size: 1.5rem
+      line-height: 1.9rem
+    &__input-group
+      &:first-of-type
+        margin-bottom: 5rem
+    &__policy
+      margin-top: 0.8rem
+      margin-bottom: 5rem
+      &-label
+        justify-content: flex-start
+        font-size: 1.333rem
+        line-height: 1.833rem
+    &__button
+      order: 5
+      font-size: 1.25rem
+      line-height: 2.166rem
+      padding: 1.12rem 4.25rem
+  .video
+    &__play
+      margin: auto
   .types
     &__card
       margin-bottom: 5rem
@@ -145,6 +164,11 @@
     font-size: 12px
   .container
     width: 90.5%
+  .section
+    padding: 25px 0
+  .col
+    &-40
+      max-width: 28.3rem
   .contacts
     &__phone
       margin-right: 0
@@ -179,24 +203,20 @@
       &__heading
         font-size: 1.85rem
       &__image
-        margin-bottom: 3.1rem
+        margin-bottom: 3.2rem
   .swiper
-    &-button
-      &-prev     
-        left: 20%
     &-slide
       &-img
         display: none
         &-mobile
           display: flex
-    &-container
-      &--mobile
-        max-width: 28.5rem
   .projects
+    background-color: $lightDark
+    padding-bottom: 25px
     &__title
       margin-bottom: 1.9rem
     &__text
-      margin-bottom: 2.8rem
+      margin-bottom: 2.9rem
       max-width: 25.3rem
   .card
     &__text
@@ -213,6 +233,60 @@
       padding: 1rem 2.4rem
       &--size-lg
         padding: 1rem 3.8rem
+  .control
+    background: linear-gradient(to bottom, $lightDark 94.2%, $light 5.8%)
+    &__section-title
+      margin-top: 0
+      padding-left: 0
+    &__image
+      margin-top: 1.45rem
+    &__video
+      min-height: 17.25rem
+      max-width: 28.333rem
+      margin-bottom: 2.45rem
+    &__text
+      max-width: 28.333rem
+      font-size: 1.166rem
+      line-height: 2rem
+      color: $light
+      margin-bottom: 2.35rem
+      &::before
+        margin-bottom: 1.2rem
+    &__form
+      max-width: 28.333rem
+      flex-direction: column
+    &__label
+      font-size: 1.25rem
+      line-height: 1.666rem
+      color: rgba($light, 0.5)
+      margin-bottom: 0
+    &__input
+      font-size: 1.5rem
+      line-height: 1.9rem
+      color: $light
+      &::placeholder
+        color: $light
+    &__input-group
+      &:first-of-type
+        margin-bottom: 5rem
+    &__policy
+      margin-top: 0.8rem
+      margin-bottom: 5rem
+      &-label
+        justify-content: flex-start
+        font-size: 1.333rem
+        line-height: 1.833rem
+        color: $light
+    &__button
+      order: 5
+      font-size: 1.25rem
+      line-height: 2.166rem
+      padding: 1.12rem 4.25rem
+  .video
+    &__play
+      width: 63px
+      height: 63px
+      margin-top: 6.3rem
   .types
     &__card
       margin-bottom: 6.5rem
@@ -226,11 +300,6 @@
     &-card
       &__text
         padding: 1.75rem 2.4rem
-@media screen and ( max-width: 320px )
-  .swiper
-    &-button
-      &-prev     
-        left: 12.5%
 @media screen and ( max-height: 530px )
   .hero
     &__scroll-down
