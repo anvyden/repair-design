@@ -51,7 +51,7 @@ $(document).ready(function () {
   });
   
   $(document).scroll(function() {
-    if ($(this).scrollTop() > 30 && $(window).width() >= 760) {
+    if ($(this).scrollTop() >= 30 && $(window).width() >= 760) {
       if($('.button-up').is(':hidden')) {
         $('.button-up').css({opacity : 1}).fadeIn('slow');
       }
@@ -130,5 +130,102 @@ $(document).ready(function () {
       typesCard.addClass("animation-fade-up");
     });
 
+    // Анимация секции types на мобильной версии
+    // var typesCardEven = $('.types__card:even');
+    // var typesCardOdd = $('.types__card:odd');
+
+    // $(window).scroll(function() {
+    //   if ($(this).scrollTop() >= typesHeight && $(window).width() <= 760)
+    //   typesCardEven.addClass("animation-fade-left");
+    // });
+    // $(window).scroll(function() {
+    //   if ($(this).scrollTop() >= typesHeight && $(window).width() <= 760)
+    //   typesCardOdd.addClass("animation-fade-right");
+    // });
+
+    // Валидация формы
+    $('.modal__form').validate({
+      errorClass: "invalid",
+      errorElement: "div",
+      rules: {
+        // строчное правило
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: "required",
+        // правило-объект (блок)
+        userEmail: {
+          required: true,
+          email: true
+        }
+      }, // сообщения
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя не должно быть короче двух букв",
+          maxlength: "Имя не должно быть больше 15 букв"
+        },
+        userPhone: "Заполните поле",
+        userEmail: {
+          required: "Заполните поле",
+          email: "Введите в формате: name@domain.com"
+        }
+      },
+    });
+    $('.footer__form').validate({
+      errorClass: "invalid",
+      errorElement: "div",
+      rules: {
+        // строчное правило
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: "required",
+        // правило-объект (блок)
+        userQuestion: {
+          required: true
+        }
+      }, // сообщения
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя не должно быть короче двух букв",
+          maxlength: "Имя не должно быть больше 15 букв"
+        },
+        userPhone: "Заполните поле",
+        userQuestion: {
+          required: "Заполните поле"
+        }
+      },
+    });
+    $('.control__form').validate({
+      errorClass: "invalid",
+      errorElement: "div",
+      rules: {
+        // строчное правило
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: "required",
+      }, // сообщения
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя не должно быть короче двух букв",
+          maxlength: "Имя не должно быть больше 15 букв"
+        },
+        userPhone: "Заполните поле",
+      },
+    });
+
+    // маска для номера телефона
+
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 });
