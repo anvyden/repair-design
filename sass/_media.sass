@@ -154,6 +154,49 @@
       line-height: 135.84%
     &__card
       margin-bottom: 5rem
+  .footer
+    background: $lightDark
+    &__wrap
+      background: $lightDark
+      padding: 2.5rem 0
+    &__title
+      font-size: 1.666rem
+      line-height: 2.333rem
+      margin-bottom: 4.1rem
+    &__form
+      max-width: 44.55rem
+      flex-direction: column
+    &__label
+      font-size: 1.25rem
+      line-height: 1.666rem
+      margin-bottom: 0.15rem
+    &__input
+      font-size: 1.5rem
+      line-height: 2rem
+      border-bottom: 1px solid rgba($light, 0.7);
+      &-group
+        margin-bottom: 4.9rem
+        &--full-width
+          margin-bottom: -0.1rem
+    &__policy
+      text-align-last: left
+      font-size: 1.333rem
+      line-height: 1.833rem
+      margin-bottom: 5.35rem
+    &__button
+      margin: 0
+      padding: 1.1rem 4rem
+      font-size: 1.25rem
+      line-height: 2.166rem
+  div
+    &.invalid
+      position: absolute
+      bottom: -15px
+      color: tomato
+  .policy
+    &__label
+      &--left
+        justify-content: start
   .button
     &-up
       display: none
@@ -254,34 +297,15 @@
         margin-bottom: 1.2rem
     &__form
       max-width: 28.333rem
-      flex-direction: column
     &__label
-      font-size: 1.25rem
-      line-height: 1.666rem
       color: rgba($light, 0.5)
-      margin-bottom: 0
     &__input
-      font-size: 1.5rem
-      line-height: 1.9rem
       color: $light
       &::placeholder
         color: $light
-    &__input-group
-      &:first-of-type
-        margin-bottom: 5rem
     &__policy
-      margin-top: 0.8rem
-      margin-bottom: 5rem
       &-label
-        justify-content: flex-start
-        font-size: 1.333rem
-        line-height: 1.833rem
         color: $light
-    &__button
-      order: 5
-      font-size: 1.25rem
-      line-height: 2.166rem
-      padding: 1.12rem 4.25rem
   .video
     &__play
       width: 63px
@@ -300,6 +324,9 @@
     &-card
       &__text
         padding: 1.75rem 2.4rem
+  .footer
+    &__form
+      max-width: 28.333rem
 @media screen and ( max-height: 530px )
   .hero
     &__scroll-down

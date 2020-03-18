@@ -462,6 +462,8 @@ template {
 }
 
 div.invalid {
+  position: absolute;
+  bottom: -20px;
   color: tomato;
 }
 
@@ -983,6 +985,7 @@ img {
 }
 
 .control__input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-basis: 30%;
@@ -1096,6 +1099,7 @@ img {
   max-width: 63.071rem;
   margin: auto;
   padding: 2.5rem;
+  padding-top: 1.1rem;
   margin-bottom: 3.714rem;
 }
 
@@ -1106,7 +1110,6 @@ img {
   font-weight: normal;
   text-align: center;
   margin-bottom: 3.214rem;
-  margin-bottom: 0;
 }
 
 .footer__form {
@@ -1118,19 +1121,20 @@ img {
 }
 
 .footer__input {
-  padding-top: 0.3rem;
+  margin-top: -0.2rem;
 }
 
 .footer__input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
-  flex-basis: 45%;
-  margin-bottom: 3.2rem;
+  flex-basis: 44.2%;
+  margin-bottom: 3.1rem;
 }
 
 .footer__input-group--full-width {
   flex-basis: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.9rem;
 }
 
 .footer__policy {
@@ -1140,7 +1144,8 @@ img {
 
 .footer__button {
   margin: auto;
-  padding: 1.286rem 4.786rem;
+  padding: 1.23rem 4.25rem;
+  font-size: 1.071rem;
 }
 
 .footer__menu {
@@ -1206,6 +1211,7 @@ img {
 }
 
 .modal__input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 3.2rem;
@@ -1426,6 +1432,59 @@ img {
   .design__card {
     margin-bottom: 5rem;
   }
+  .footer {
+    background: #252525;
+  }
+  .footer__wrap {
+    background: #252525;
+    padding: 2.5rem 0;
+  }
+  .footer__title {
+    font-size: 1.666rem;
+    line-height: 2.333rem;
+    margin-bottom: 4.1rem;
+  }
+  .footer__form {
+    max-width: 44.55rem;
+    flex-direction: column;
+  }
+  .footer__label {
+    font-size: 1.25rem;
+    line-height: 1.666rem;
+    margin-bottom: 0.15rem;
+  }
+  .footer__input {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .footer__input-group {
+    margin-bottom: 4.9rem;
+  }
+  .footer__input-group--full-width {
+    margin-bottom: -0.1rem;
+  }
+  .footer__policy {
+    -moz-text-align-last: left;
+    text-align-last: left;
+    font-size: 1.333rem;
+    line-height: 1.833rem;
+    margin-bottom: 5.35rem;
+  }
+  .footer__button {
+    margin: 0;
+    padding: 1.1rem 4rem;
+    font-size: 1.25rem;
+    line-height: 2.166rem;
+  }
+  div.invalid {
+    position: absolute;
+    bottom: -15px;
+    color: tomato;
+  }
+  .policy__label--left {
+    justify-content: start;
+  }
   .button-up {
     display: none;
   }
@@ -1551,17 +1610,11 @@ img {
   }
   .control__form {
     max-width: 28.333rem;
-    flex-direction: column;
   }
   .control__label {
-    font-size: 1.25rem;
-    line-height: 1.666rem;
     color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 0;
   }
   .control__input {
-    font-size: 1.5rem;
-    line-height: 1.9rem;
     color: #ffffff;
   }
   .control__input::-webkit-input-placeholder {
@@ -1579,24 +1632,8 @@ img {
   .control__input::placeholder {
     color: #ffffff;
   }
-  .control__input-group:first-of-type {
-    margin-bottom: 5rem;
-  }
-  .control__policy {
-    margin-top: 0.8rem;
-    margin-bottom: 5rem;
-  }
   .control__policy-label {
-    justify-content: flex-start;
-    font-size: 1.333rem;
-    line-height: 1.833rem;
     color: #ffffff;
-  }
-  .control__button {
-    order: 5;
-    font-size: 1.25rem;
-    line-height: 2.166rem;
-    padding: 1.12rem 4.25rem;
   }
   .video__play {
     width: 63px;
@@ -1617,6 +1654,9 @@ img {
   }
   .design-card__text {
     padding: 1.75rem 2.4rem;
+  }
+  .footer__form {
+    max-width: 28.333rem;
   }
 }
 
