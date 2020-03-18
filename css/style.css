@@ -1037,6 +1037,7 @@ img {
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
+  line-height: 1.786rem;
   margin-top: 0;
   margin-bottom: 0.7rem;
 }
@@ -1081,12 +1082,103 @@ img {
 }
 
 .design__text {
-  display: inline-block;
   max-width: 53.571rem;
-  margin: 1.3rem 0 3.22rem 0;
+  margin: 1.3rem auto 3.22rem auto;
   text-align: center;
   font-size: 1.429rem;
   line-height: 1.929rem;
+}
+
+.team__card {
+  position: relative;
+}
+
+.team__section-title {
+  margin-left: 0.2rem;
+  margin-bottom: 5.9rem;
+}
+
+.team__image {
+  margin-bottom: 1.3rem;
+}
+
+.team__text {
+  margin: 0 auto;
+  max-width: 32rem;
+  font-size: 1.429rem;
+  line-height: 1.923rem;
+}
+
+.team__description {
+  margin: 0 auto;
+  max-width: 40.57rem;
+  text-align: center;
+  font-size: 1.429rem;
+  line-height: 2.429rem;
+}
+
+.team__description::before {
+  content: '';
+  display: block;
+  margin: auto;
+  margin-bottom: 0.6rem;
+  width: 55px;
+  height: 2px;
+  background-color: #E3B873;
+  border-radius: 30px;
+}
+
+.team-card__image-mobile {
+  display: none;
+}
+
+.team-card__title {
+  color: #181818;
+  padding: 1.4rem 1.429rem 0 1.429rem;
+  margin-bottom: 0.3rem;
+  font-weight: normal;
+}
+
+.team-card__text {
+  margin-top: -6.1rem;
+  max-width: 16.643rem;
+  text-align: center;
+  padding: 0;
+}
+
+.team__row {
+  margin-bottom: 3.8rem;
+  justify-content: space-around;
+}
+
+.card__icon {
+  position: absolute;
+  left: -4rem;
+  top: -3.55rem;
+}
+
+.card__job {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 0 1.429rem;
+  font-size: 1.286rem;
+  line-height: 1.857rem;
+  font-weight: normal;
+  color: #959595;
+}
+
+.card__experience {
+  display: inline-block;
+  max-width: 16.643rem;
+  max-height: 3.143rem;
+  padding: 0.8rem 3.22rem;
+  background-color: #E3B873;
+  font-family: 'Yeseva one', cursive;
+  font-size: 0.929rem;
+  line-height: 1.429rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .footer {
@@ -1308,7 +1400,7 @@ img {
   .swiper-slide__text:last-of-type {
     margin-bottom: 3rem;
   }
-  .card__title {
+  .types-card__title {
     max-width: 14.55rem;
   }
 }
@@ -1318,19 +1410,19 @@ img {
     flex-direction: column;
     align-items: center;
   }
-  .col-40 {
+  .row-40 {
     width: 100%;
     max-width: 35rem;
   }
-  .col-40--left {
+  .row-40--left {
     padding: 0;
   }
-  .col-60 {
+  .row-60 {
     width: 100%;
     margin-top: 2.7rem;
     max-width: 35rem;
   }
-  .col-60--top {
+  .row-60--top {
     padding: 0;
   }
   .swiper-slide--right {
@@ -1414,6 +1506,21 @@ img {
   .types__card {
     margin-bottom: 5rem;
   }
+  .card__icon {
+    left: -4.5rem;
+    top: -4.15rem;
+  }
+  .card__job {
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 2.166rem;
+  }
+  .card__experience {
+    min-width: 19.416rem;
+    max-heiht: 3.666rem;
+    font-size: 1.083rem;
+    line-height: 1.666rem;
+  }
   .card__text {
     margin-left: 0;
   }
@@ -1431,6 +1538,48 @@ img {
   }
   .design__card {
     margin-bottom: 5rem;
+  }
+  .team {
+    background-color: #252525;
+  }
+  .team__section-title {
+    margin-bottom: 6.8rem;
+    margin-left: 0;
+  }
+  .team__heading {
+    color: #ffffff;
+  }
+  .team__image {
+    margin-bottom: 1.6rem;
+  }
+  .team-card__image {
+    display: none;
+  }
+  .team-card__image-mobile {
+    display: block;
+  }
+  .team-card__title {
+    padding: 1.5rem 1.429rem 0 1.429rem;
+    font-size: 1.5rem;
+    line-height: 2.083rem;
+  }
+  .team-card__text {
+    padding: 0;
+    max-width: 19.416rem;
+    margin-left: auto;
+    margin-top: -6.7rem;
+  }
+  .team__text {
+    max-width: 35rem;
+    font-size: 1.25rem;
+    line-height: 1.666rem;
+    color: #ffffff;
+  }
+  .team__card {
+    margin-bottom: 9.2rem;
+  }
+  .team__description {
+    display: none;
   }
   .footer {
     background: #252525;
@@ -1577,6 +1726,21 @@ img {
   .card__list {
     margin-bottom: 1.55rem;
   }
+  .card__icon {
+    left: -4.5rem;
+    top: -4.15rem;
+  }
+  .card__job {
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 2.166rem;
+  }
+  .card__experience {
+    min-width: 19.416rem;
+    min-height: 3.666rem;
+    font-size: 1.083rem;
+    line-height: 1.666rem;
+  }
   .card__pricetag {
     padding: 1rem 2.4rem;
   }
@@ -1654,6 +1818,50 @@ img {
   }
   .design-card__text {
     padding: 1.75rem 2.4rem;
+  }
+  .team {
+    background-color: #252525;
+  }
+  .team__section-title {
+    margin-bottom: 6.8rem;
+    margin-left: 0;
+  }
+  .team__heading {
+    color: #ffffff;
+    margin-bottom: 0.7rem;
+  }
+  .team__image {
+    margin-bottom: 1.9rem;
+  }
+  .team-card__image {
+    display: none;
+  }
+  .team-card__image-mobile {
+    display: block;
+  }
+  .team-card__title {
+    padding: 1.63rem 1.429rem 0 1.429rem;
+    font-size: 1.5rem;
+    line-height: 2.083rem;
+  }
+  .team-card__text {
+    padding: 0;
+    max-width: 19.416rem;
+    margin-left: auto;
+    margin-top: -6.7rem;
+  }
+  .team__text {
+    max-width: 28.333rem;
+    font-size: 1.25rem;
+    line-height: 1.666rem;
+    color: #ffffff;
+  }
+  .team__card {
+    margin-left: 2.7rem;
+    margin-bottom: 9.2rem;
+  }
+  .team__description {
+    display: none;
   }
   .footer__form {
     max-width: 28.333rem;

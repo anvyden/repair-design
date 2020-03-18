@@ -47,14 +47,14 @@
         margin-bottom: 1.2rem
         &:last-of-type
           margin-bottom: 3rem
-  .card
-    &__title
-      max-width: 14.55rem
+  .types
+    &-card
+      &__title
+        max-width: 14.55rem
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
     align-items: center
-  .col
     &-40
       width: 100%
       max-width: 35rem
@@ -141,6 +141,18 @@
     &__card
       margin-bottom: 5rem
   .card
+    &__icon
+      left: -4.5rem
+      top: -4.15rem
+    &__job
+      margin-bottom: 1.8rem 
+      font-size: 1.5rem
+      line-height: 2.166rem
+    &__experience
+      min-width: 19.416rem
+      max-heiht: 3.666rem
+      font-size: 1.083rem
+      line-height: 1.666rem
     &__text
       margin-left: 0
   .design
@@ -154,6 +166,38 @@
       line-height: 135.84%
     &__card
       margin-bottom: 5rem
+  .team
+    background-color: $lightDark
+    &__section-title
+      margin-bottom: 6.8rem
+      margin-left: 0
+    &__heading
+      color: $light
+    &__image
+      margin-bottom: 1.6rem
+    &-card
+      &__image
+        display: none
+        &-mobile
+          display: block
+      &__title
+        padding: 1.5rem 1.429rem 0 1.429rem
+        font-size: 1.5rem
+        line-height: 2.083rem
+      &__text
+        padding: 0
+        max-width: 19.416rem
+        margin-left: auto
+        margin-top: -6.7rem
+    &__text
+      max-width: 35rem
+      font-size: 1.25rem
+      line-height: 1.666rem
+      color: $light
+    &__card
+      margin-bottom: 9.2rem
+    &__description
+      display: none
   .footer
     background: $lightDark
     &__wrap
@@ -272,6 +316,18 @@
       line-height: 1.9rem
     &__list
       margin-bottom: 1.55rem
+    &__icon
+      left: -4.5rem
+      top: -4.15rem
+    &__job
+      margin-bottom: 1.8rem 
+      font-size: 1.5rem
+      line-height: 2.166rem
+    &__experience
+      min-width: 19.416rem
+      min-height: 3.666rem
+      font-size: 1.083rem
+      line-height: 1.666rem
     &__pricetag
       padding: 1rem 2.4rem
       &--size-lg
@@ -324,6 +380,40 @@
     &-card
       &__text
         padding: 1.75rem 2.4rem
+  .team
+    background-color: $lightDark
+    &__section-title
+      margin-bottom: 6.8rem
+      margin-left: 0
+    &__heading
+      color: $light
+      margin-bottom: 0.7rem
+    &__image
+      margin-bottom: 1.9rem
+    &-card
+      &__image
+        display: none
+        &-mobile
+          display: block
+      &__title
+        padding: 1.63rem 1.429rem 0 1.429rem
+        font-size: 1.5rem
+        line-height: 2.083rem
+      &__text
+        padding: 0
+        max-width: 19.416rem
+        margin-left: auto
+        margin-top: -6.7rem
+    &__text
+      max-width: 28.333rem
+      font-size: 1.25rem
+      line-height: 1.666rem
+      color: $light
+    &__card
+      margin-left: 2.7rem
+      margin-bottom: 9.2rem
+    &__description
+      display: none
   .footer
     &__form
       max-width: 28.333rem
