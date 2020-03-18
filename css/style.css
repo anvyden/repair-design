@@ -1148,7 +1148,7 @@ img {
 
 .team__row {
   margin-bottom: 3.8rem;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card__icon {
@@ -1243,6 +1243,54 @@ img {
 .footer__menu {
   background-color: #131313;
   padding: 4.286rem 0;
+}
+
+.footer__map {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  max-width: 66.071rem;
+  min-height: 33.214rem;
+}
+
+.contacts-info {
+  display: block;
+  max-width: 38rem;
+  margin: 0 auto;
+  font-size: 1.429rem;
+  line-height: 2rem;
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  color: #E3B873;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contacts-info__adress {
+  display: block;
+}
+
+.contacts-info__phone {
+  color: #E3B873;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contacts-info__text-phone {
+  display: block;
+  margin-bottom: 1.65rem;
+}
+
+.contacts-info__social {
+  margin-bottom: 2.5rem;
+}
+
+.contacts-info__instagram {
+  text-decoration: none;
+}
+
+.contacts-info__email {
+  margin-right: 0.65rem;
+  text-decoration: none;
 }
 
 .modal {
