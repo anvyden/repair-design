@@ -55,6 +55,7 @@
   .row
     flex-direction: column
     align-items: center
+  .col
     &-40
       width: 100%
       max-width: 35rem
@@ -144,6 +145,11 @@
     &__icon
       left: -4.5rem
       top: -4.15rem
+      &-second-mobile
+        top: -5.9rem
+      &-third-mobile
+        left: -4.45rem
+        top: -5.75rem
     &__job
       margin-bottom: 1.8rem 
       font-size: 1.5rem
@@ -197,7 +203,11 @@
     &__card
       margin-bottom: 9.2rem
     &__description
-      display: none
+      display: none 
+    &__row
+      .col-32
+        &:nth-child(3)
+          margin-top: -0.25rem  
   .footer
     background: $lightDark
     &__wrap
@@ -235,8 +245,17 @@
   div
     &.invalid
       position: absolute
-      bottom: -15px
+      bottom: -18px
       color: tomato
+  .control
+    &__policy
+      #policyCheckbox-error
+        left: 0
+  .footer
+    &__policy
+      #policyCheckbox-error
+        left: 0
+        bottom: -20px
   .policy
     &__label
       &--left
@@ -319,6 +338,11 @@
     &__icon
       left: -4.5rem
       top: -4.15rem
+      &-second-mobile
+        top: -5.9rem
+      &-third-mobile
+        left: -4.45rem
+        top: -5.75rem
     &__job
       margin-bottom: 1.8rem 
       font-size: 1.5rem
@@ -414,6 +438,10 @@
       margin-bottom: 9.2rem
     &__description
       display: none
+    &__row
+      .col-32
+        &:nth-child(3)
+          margin-top: -0.25rem
   .footer
     &__form
       max-width: 28.333rem

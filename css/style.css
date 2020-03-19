@@ -430,6 +430,7 @@ template {
 }
 
 .policy {
+  position: relative;
   font-size: 1.143rem;
 }
 
@@ -438,7 +439,7 @@ template {
   visibility: hidden;
 }
 
-.policy__checkbox:checked + .policy__label::before {
+.policy__checkbox:checked ~ .policy__label::before {
   background: #E3B873 url("../img/check.svg") no-repeat center/0.75rem;
 }
 
@@ -469,6 +470,18 @@ div.invalid {
 
 input.invalid {
   border-bottom: 1px solid tomato;
+}
+
+.control__policy #policyCheckbox-error {
+  position: absolute;
+  left: 36.5%;
+  color: tomato;
+}
+
+.footer__policy #policyCheckbox-error {
+  position: absolute;
+  left: 30%;
+  color: tomato;
 }
 
 .button-up {
@@ -1147,6 +1160,8 @@ img {
 }
 
 .team__row {
+  margin: 0 auto;
+  max-width: 73.3rem;
   margin-bottom: 3.8rem;
   justify-content: space-between;
 }
@@ -1458,19 +1473,19 @@ img {
     flex-direction: column;
     align-items: center;
   }
-  .row-40 {
+  .col-40 {
     width: 100%;
     max-width: 35rem;
   }
-  .row-40--left {
+  .col-40--left {
     padding: 0;
   }
-  .row-60 {
+  .col-60 {
     width: 100%;
     margin-top: 2.7rem;
     max-width: 35rem;
   }
-  .row-60--top {
+  .col-60--top {
     padding: 0;
   }
   .swiper-slide--right {
@@ -1558,6 +1573,13 @@ img {
     left: -4.5rem;
     top: -4.15rem;
   }
+  .card__icon-second-mobile {
+    top: -5.9rem;
+  }
+  .card__icon-third-mobile {
+    left: -4.45rem;
+    top: -5.75rem;
+  }
   .card__job {
     margin-bottom: 1.8rem;
     font-size: 1.5rem;
@@ -1629,6 +1651,9 @@ img {
   .team__description {
     display: none;
   }
+  .team__row .col-32:nth-child(3) {
+    margin-top: -0.25rem;
+  }
   .footer {
     background: #252525;
   }
@@ -1676,8 +1701,15 @@ img {
   }
   div.invalid {
     position: absolute;
-    bottom: -15px;
+    bottom: -18px;
     color: tomato;
+  }
+  .control__policy #policyCheckbox-error {
+    left: 0;
+  }
+  .footer__policy #policyCheckbox-error {
+    left: 0;
+    bottom: -20px;
   }
   .policy__label--left {
     justify-content: start;
@@ -1777,6 +1809,13 @@ img {
   .card__icon {
     left: -4.5rem;
     top: -4.15rem;
+  }
+  .card__icon-second-mobile {
+    top: -5.9rem;
+  }
+  .card__icon-third-mobile {
+    left: -4.45rem;
+    top: -5.75rem;
   }
   .card__job {
     margin-bottom: 1.8rem;
@@ -1910,6 +1949,9 @@ img {
   }
   .team__description {
     display: none;
+  }
+  .team__row .col-32:nth-child(3) {
+    margin-top: -0.25rem;
   }
   .footer__form {
     max-width: 28.333rem;

@@ -159,7 +159,8 @@ $(document).ready(function () {
         userEmail: {
           required: true,
           email: true
-        }
+        },
+        policyCheckbox: "required",
       }, // сообщения
       messages: {
         userName: {
@@ -171,7 +172,8 @@ $(document).ready(function () {
         userEmail: {
           required: "Заполните поле",
           email: "Введите в формате: name@domain.com"
-        }
+        },
+        policyCheckbox: "Обязательное поле"
       },
     });
     $('.footer__form').validate({
@@ -188,7 +190,8 @@ $(document).ready(function () {
         // правило-объект (блок)
         userQuestion: {
           required: true
-        }
+        },
+        policyCheckbox: "required",
       }, // сообщения
       messages: {
         userName: {
@@ -199,7 +202,8 @@ $(document).ready(function () {
         userPhone: "Заполните поле",
         userQuestion: {
           required: "Заполните поле"
-        }
+        },
+        policyCheckbox: "Обязательное поле"
       },
     });
     $('.control__form').validate({
@@ -213,6 +217,7 @@ $(document).ready(function () {
           maxlength: 15
         },
         userPhone: "required",
+        policyCheckbox: "required",
       }, // сообщения
       messages: {
         userName: {
@@ -221,6 +226,7 @@ $(document).ready(function () {
           maxlength: "Имя не должно быть больше 15 букв"
         },
         userPhone: "Заполните поле",
+        policyCheckbox: "Обязательное поле",
       },
     });
 

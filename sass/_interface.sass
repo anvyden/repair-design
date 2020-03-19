@@ -39,11 +39,12 @@
     &::placeholder
       color: $light
 .policy
+  position: relative
   font-size: 1.143rem
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked +
+    &:checked ~
       .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.75rem
@@ -68,6 +69,18 @@ div
 input
   &.invalid
     border-bottom: 1px solid tomato
+.control
+  &__policy
+    #policyCheckbox-error
+      position: absolute
+      left: 36.5%
+      color: tomato
+.footer
+  &__policy
+    #policyCheckbox-error
+      position: absolute
+      left: 30%
+      color: tomato
 .button-up
     opacity: 0
     position: fixed
