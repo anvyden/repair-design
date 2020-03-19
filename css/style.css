@@ -1207,7 +1207,7 @@ img {
   margin: auto;
   padding: 2.5rem;
   padding-top: 1.1rem;
-  margin-bottom: 3.714rem;
+  margin-bottom: 3.55rem;
 }
 
 .footer__title {
@@ -1260,17 +1260,21 @@ img {
   padding: 4.286rem 0;
 }
 
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__map {
-  margin: 0 auto;
-  margin-bottom: 4rem;
+  margin-bottom: 3.85rem;
+  width: 100%;
   max-width: 66.071rem;
   min-height: 33.214rem;
 }
 
-.contacts-info {
-  display: block;
+.contacts-info__text {
   max-width: 38rem;
-  margin: 0 auto;
   font-size: 1.429rem;
   line-height: 2rem;
   font-family: 'Yeseva One', cursive;
@@ -1278,10 +1282,8 @@ img {
   color: #E3B873;
   text-transform: uppercase;
   text-align: center;
-}
-
-.contacts-info__adress {
-  display: block;
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
 }
 
 .contacts-info__phone {
@@ -1290,13 +1292,9 @@ img {
   cursor: pointer;
 }
 
-.contacts-info__text-phone {
-  display: block;
-  margin-bottom: 1.65rem;
-}
-
 .contacts-info__social {
-  margin-bottom: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.8rem;
 }
 
 .contacts-info__instagram {
@@ -1304,7 +1302,8 @@ img {
 }
 
 .contacts-info__email {
-  margin-right: 0.65rem;
+  margin-left: -0.3rem;
+  margin-right: 0.7rem;
   text-decoration: none;
 }
 
@@ -1953,8 +1952,38 @@ img {
   .team__row .col-32:nth-child(3) {
     margin-top: -0.25rem;
   }
+  .footer__wrap {
+    margin-bottom: 1.4rem;
+  }
   .footer__form {
     max-width: 28.333rem;
+  }
+  .footer__map {
+    order: -2;
+    max-width: 28.333rem;
+    min-height: 21.25rem;
+    margin-bottom: 3.3rem;
+  }
+  .footer__menu {
+    display: none;
+  }
+  .contacts-info__text {
+    max-width: 27rem;
+    font-size: 1.5rem;
+    line-height: 2.083rem;
+    margin-bottom: 2rem;
+  }
+  .contacts-info__email {
+    margin-left: 0.2rem;
+    margin-right: 1.55rem;
+  }
+  .contacts-info__email img {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+  .contacts-info__instagram img {
+    width: 3.25rem;
+    height: 3.25rem;
   }
 }
 
