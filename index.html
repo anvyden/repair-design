@@ -199,12 +199,12 @@
         <p class="control__text wow fadeInLeft" data-wow-delay="0.1s">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
         <form action="send.php" method="POST" class="form control__form wow fadeInRight" data-wow-delay="0.1s"">
           <div class="control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <label for="control-user-name" class="label form__label control__label">Имя</label>
+            <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" autocomplete="off" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="control-user-phone" class="label form__label control__label">Телефон</label>
+            <input type="tel" autocomplete="off" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
@@ -519,18 +519,18 @@
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label footer__label label--light">Имя</label>
+            <label for="footer-user-name" class="label form__label footer__label label--light">Имя</label>
             <input type="text" autocomplete="off" name="userName" class="input form__input footer__input
-            input--light" id="user-name" placeholder="Как вас зовут:">
+            input--light" id="footer-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label footer__label label--light">Телефон</label>
+            <label for="footer-user-phone" class="label form__label footer__label label--light">Телефон</label>
             <input type="tel" autocomplete="off" name="userPhone" class="input form__input footer__input
-            input--light" id="user-phone" placeholder="Ваш номер телефона:"></div>
+            input--light" id="footer-user-phone" placeholder="Ваш номер телефона:"></div>
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label footer__label label--light">Вопрос</label>
+            <label for="footer-user-question" class="label form__label footer__label label--light">Вопрос</label>
             <input type="text" autocomplete="off" name="userQuestion" class="input form__input footer__input
-            input--light" id="user-question" placeholder="Я хочу спросить:"></div>
+            input--light" id="footer-user-question" placeholder="Я хочу спросить:"></div>
           <div class="policy footer__policy">
             <input type="checkbox" name="policyCheckbox" id="footer__policy-checkbox" class="policy__checkbox" checked>
             <label for="footer__policy-checkbox" class="policy__label policy__label--left policy__label--center">Я соглашаюсь с обработкой данных</label>
@@ -615,6 +615,13 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <div class="thanks">
+    <div class="thanks__dialog">
+      <button class="thanks__close"></button>
+      <strong class="thanks__text">Заявка отправлена, мы свяжемся с вами через 10 минут</strong>
+      <p class="thanks__group">Вы можете подписаться <a href="https://vk.com/glo_academy" class="thanks__VK">на нашу группу в VK</a></p>
+    </div>
+  </div>
   <button class="button-up">Наверх</button>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
