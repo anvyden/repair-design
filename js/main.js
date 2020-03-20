@@ -236,6 +236,20 @@ $(document).ready(function () {
         },
         policyCheckbox: "Обязательное поле"
       },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $('.thanks').addClass('thanks--visible');
+            $(form)[0].reset();
+            if ($('.thanks').hasClass('thanks--visible')) {
+              modal.removeClass('modal--visible');
+            }
+          }
+        });
+      },
     });
     $('.control__form').validate({
       errorClass: "invalid",
@@ -258,6 +272,20 @@ $(document).ready(function () {
         },
         userPhone: "Заполните поле",
         policyCheckbox: "Обязательное поле",
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $('.thanks').addClass('thanks--visible');
+            $(form)[0].reset();
+            if ($('.thanks').hasClass('thanks--visible')) {
+              modal.removeClass('modal--visible');
+            }
+          }
+        });
       },
     });
 
