@@ -170,7 +170,10 @@ $(document).ready(function () {
           minlength: 2,
           maxlength: 15
         },
-        userPhone: "required",
+        userPhone: {
+          required: true,
+          minlength: 17
+        },
         // правило-объект (блок)
         userEmail: {
           required: true,
@@ -184,7 +187,10 @@ $(document).ready(function () {
           minlength: "Имя не должно быть короче двух букв",
           maxlength: "Имя не должно быть больше 15 букв"
         },
-        userPhone: "Заполните поле",
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Номер не может быть короче 11 цифр"
+        },
         userEmail: {
           required: "Заполните поле",
           email: "Введите в формате: name@domain.com"
@@ -217,7 +223,10 @@ $(document).ready(function () {
           minlength: 2,
           maxlength: 15
         },
-        userPhone: "required",
+        userPhone: {
+          required: true,
+          minlength: 17
+        },
         // правило-объект (блок)
         userQuestion: {
           required: true
@@ -230,7 +239,10 @@ $(document).ready(function () {
           minlength: "Имя не должно быть короче двух букв",
           maxlength: "Имя не должно быть больше 15 букв"
         },
-        userPhone: "Заполните поле",
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Номер не может быть короче 11 цифр"
+        },
         userQuestion: {
           required: "Заполните поле"
         },
@@ -261,7 +273,10 @@ $(document).ready(function () {
           minlength: 2,
           maxlength: 15
         },
-        userPhone: "required",
+        userPhone: {
+          required: true,
+          minlength: 17
+        },
         policyCheckbox: "required",
       }, // сообщения
       messages: {
@@ -270,7 +285,10 @@ $(document).ready(function () {
           minlength: "Имя не должно быть короче двух букв",
           maxlength: "Имя не должно быть больше 15 букв"
         },
-        userPhone: "Заполните поле",
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Номер не может быть короче 11 цифр"
+        },
         policyCheckbox: "Обязательное поле",
       },
       submitHandler: function(form) {
