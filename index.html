@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ab8d2379-f0eb-45bc-a85b-2fe4bab5e946&lang=ru_RU" type="text/javascript"></script>
-  <title>hello, world!</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ab8d2379-f0eb-45bc-a85b-2fe4bab5e946&lang=ru_RU"></script>
+  <title>Турецкий Ремонт</title>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
+        <div class="logo menu__logo">Repair Design Project</div>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
+          <a href="#main" class="nav__item">Главная</a>
+          <a href="#projects" class="nav__item">Проекты</a>
           <a href="#" class="nav__item">Замер</a>
-          <a href="#" class="nav__item">Команда</a>
+          <a href="#team" class="nav__item">Команда</a>
           <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#contacts" class="nav__item">Контакты</a>
         </nav>
         <!-- /.nav -->
         <div class="contacts menu__contacts">
@@ -34,24 +34,24 @@
     <!-- /.container -->
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" id="main">
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title wow fadeInRight" data-wow-delay="0.3s">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
-          <p class="hero__text wow fadeInRight" data-wow-delay="0.6s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary wow fadeInRight" data-wow-delay="1s" data-toggle="modal">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline wow fadeInRight" data-wow-delay="1s">Отправить заявку</button>
+          <h1 class="title hero__title">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
+          <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
+          <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость</button>
+          <button class="button hero__button button--outline">Отправить заявку</button>
         </div>
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down wow bounce" data-wow-iteration="2" data-wow-delay="8s">листайте вниз</a>
+      <a href="#" class="hero__scroll-down">листайте вниз</a>
     </section>
     <!-- /.hero -->
-    <section class="section section--dark projects">
+    <section class="section section--dark projects" id="projects">
       <div class="container">
         <div class="row row--center">
           <div class="col-40 col-40--left projects__col-40">
@@ -62,7 +62,7 @@
             </div>
             <!-- /.section-title -->
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container projects-swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper swiper-no-swiping">
               <!-- Slides -->
@@ -137,40 +137,27 @@
               </div>
             </div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev projects-swiper-button-prev"></div>
+            <div class="swiper-pagination projects-pagination"></div>
+            <div class="swiper-button-next projects-swiper-button-next"></div>
           </div>
           </div>
           <!-- /.col-40 -->
           <div class="col-60 col-60--top">
             <!-- Slider main container -->
-            <div class="swiper-container swiper-container">
+            <div class="swiper-container projects-swiper">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
-                  <div class="swiper-slide swiper-slide--right swiper-slide-img">
-                    <img src="img/project/project.jpg" alt="">
+                  <div class="swiper-slide swiper-slide--right">
+                    <img src="img/project/project.jpg" class="swiper-slide__img" alt="">
                   </div>
-                  <div class="swiper-slide swiper-slide--right swiper-slide-img">
-                    <img src="img/project/project.jpg" alt="">
+                  <div class="swiper-slide swiper-slide--right">
+                    <img src="img/project/project.jpg" class="swiper-slide__img" alt="">
                   </div>
-                  <div class="swiper-slide swiper-slide--right swiper-slide-img">
-                    <img src="img/project/project.jpg" alt="">
+                  <div class="swiper-slide swiper-slide--right">
+                    <img src="img/project/project.jpg" class="swiper-slide__img" alt="">
                   </div>
-              </div>
-            </div>
-            <div class="swiper-container">
-              <div class="swiper-wrapper swiper-no-swiping">
-                <div class="swiper-slide swiper-slide--right swiper-slide-img-mobile">
-                  <img src="img/project/project-mobile.jpg" alt="">
-                </div>
-                <div class="swiper-slide swiper-slide--right swiper-slide-img-mobile">
-                  <img src="img/project/project-mobile.jpg" alt="">
-                </div>
-                <div class="swiper-slide swiper-slide--right swiper-slide-img-mobile">
-                  <img src="img/project/project-mobile.jpg" alt="">
-                </div>
               </div>
             </div>
           </div>
@@ -180,7 +167,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section section--dark projects -->
+    <!-- /.section section-dark projects -->
     <section class="section control">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
@@ -197,7 +184,7 @@
         </div>
         <!-- /.control__video video -->
         <p class="control__text wow fadeInLeft" data-wow-delay="0.1s">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="send.php" method="POST" class="form control__form wow fadeInRight" data-wow-delay="0.1s"">
+        <form action="send.php" method="POST" class="form control__form wow fadeInRight" data-wow-delay="0.1s">
           <div class="control__input-group">
             <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
@@ -438,7 +425,7 @@
       </div>
       <!-- /.contaier -->
     </section>
-    <section class="section team">
+    <section class="section team" id="team">
       <div class="container">
         <div class="section-title team__section-title">
           <h2 class="section-title__heading team__heading">Наша команда</h2>
@@ -539,7 +526,7 @@
           <button class="button button--primary footer__button button--size-lg">Отправить</button>
         </form>
       </div>
-      <div class="footer__info">
+      <div class="footer__info" id="contacts">
         <div class="contacts-info">
           <p class="contacts-info__text">
             Ростов на дону, Торговый центр Plaza Прямой телефон<a href="tel:+79997683299" class="contacts-info__phone"> +7 (999) 768-32-99</a>
@@ -547,7 +534,7 @@
           <!-- <span class="contacts-info__adress">Ростов на дону, Торговый центр Plaza</span> -->
           <!-- <span class="contacts-info__text-phone">Прямой телефон<a href="tel:+79997683299" class="contacts-info__phone"> +7 (999) 768-32-99</a></span> -->
           <div class="contacts-info__social">
-            <a href="#" class="contacts-info__email">
+            <a href="mailto:denis-quesaddilias4@gmail.com" class="contacts-info__email">
               <img src="img/email.svg" alt="Email">
             </a>
             <a href="#" class="contacts-info__instagram">
@@ -562,14 +549,14 @@
     <div class="footer__menu">
       <div class="container">
         <div class="menu">
-          <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
+          <div class="logo menu__logo">Repair Design Project</div>
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
+            <a href="#main" class="nav__item">Главная</a>
+            <a href="#projects" class="nav__item">Проекты</a>
             <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
+            <a href="#team" class="nav__item">Команда</a>
             <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#contacts" class="nav__item">Контакты</a>
           </nav>
           <!-- /.nav -->
           <div class="contacts menu__contacts">

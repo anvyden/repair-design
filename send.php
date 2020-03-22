@@ -1,5 +1,5 @@
 <?php
-
+$mail->CharSet = "UTF-8"
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];

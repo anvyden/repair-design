@@ -74,31 +74,37 @@ $(document).ready(function () {
     } else { $('.button-up').stop(true, false).fadeOut('fast'); }
   });
   $('.button-up').click(function() {
-    $('html, body').stop().animate({scrollTop : 0}, 700);
+    $('html, body').stop().animate({scrollTop : 0}, 1300);
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  $('.nav').on('click', 'a', function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+        idTop = $(id).offset().top;
+      $('body, html').animate({scrollTop: idTop}, 1300);
+  });
+
+  var mySwiper = new Swiper ('.projects-swiper', {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.projects-pagination',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.projects-swiper-button-next',
+      prevEl: '.projects-swiper-button-prev',
     },
   });
-
+    
   // $(window).resize(function() {
   //   if ($(window).width() <= 760) {
   //     $('.col-60').removeClass('.col-60--top');
   //   };
   // });
 
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
-  var bullet = $('.swiper-pagination.bullet')
+  var next = $('.projects-swiper-button-next');
+  var prev = $('.projects-swiper-button-prev');
+  var bullets = $('.projects-pagination');
 
   // next.css('left', prev.width() + 20 + bullets.width() + 20)
   // bullets.css('left', prev.css('left') + prev.width() + 20)
@@ -112,9 +118,23 @@ $(document).ready(function () {
   //     }
 
   // });
+  var mql = window.matchMedia('all and (max-width: 570px)');
+  // $(window).resize(function () {
+    if (mql.matches) {
+      // $('.projects__section-title').after($('.swiper-container-mobile')),
+      $('.swiper-slide__img').each(function () {
+        $(this).attr('src', 'img/project/project-mobile.jpg');
+        });
+      // $('.swiper-slide__img').attr.each('src', 'img/project/project-mobile.jpg');
+    } else {
+      // $('.col-60').append($('.swiper-container-mobile'));
+      $('.swiper-slide__img').each(function () {
+        $(this).attr('src', 'img/project/project.jpg');
+        });
+    }
 
   // $(window).resize(function () {
-  //   if ($(window).width() <= 760) {
+  //   if ($(window).width() <= 560) {
   //     // $('.projects__section-title').after($('.swiper-container-mobile')),
   //     $('.swiper-slide__img').each(function () {
   //       $(this).attr('src', 'img/project/project-mobile.jpg');
@@ -132,19 +152,19 @@ $(document).ready(function () {
 
     bullets.css('left', positionPrev.left + prev.width() + 20)
     next.css('left', positionPrev.left + prev.width() + 20 + bullets.width() + 20)
-
+   
     new WOW().init();
 
     // animation visibility
 
-    var typesCard = $('.types__card');
-    var typesHeight = $('.header').height() + $(".hero").height() + $('.projects').height()
-      + $('.control').height() - 200;
+    // var typesCard = $('.types__card');
+    // var typesHeight = $('.header').height() + $(".hero").height() + $('.projects').height()
+    //   + $('.control').height() - 200;
 
-    $(window).scroll(function() {
-      if ($(this).scrollTop() >= typesHeight && $(window).width() >= 760)
-      typesCard.addClass("animation-fade-up");
-    });
+    // $(window).scroll(function() {
+    //   if ($(this).scrollTop() >= typesHeight && $(window).width() >= 760)
+    //   typesCard.addClass("animation-fade-up");
+    // });
 
     // Анимация секции types на мобильной версии
     // var typesCardEven = $('.types__card:even');
