@@ -48,9 +48,14 @@
         &:last-of-type
           margin-bottom: 3rem
   .types
+    &__row
+      margin-left: 0
     &-card
       &__title
         max-width: 14.55rem
+  .design
+    &__row
+      margin-left: 0
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -86,8 +91,10 @@
         font-size: 1.166rem
         line-height: 1.583rem
   .section
+    padding: 2.05rem 0
     &-title
       &__heading
+        margin-bottom: 1.2rem
         text-align: center
       &__text
         text-align: center
@@ -108,6 +115,7 @@
       max-width: 35rem
       text-align: left
   .control
+    margin-bottom: 0.45rem
     &__form
       max-width: 44.55rem
       flex-direction: column
@@ -122,23 +130,27 @@
       &:first-of-type
         margin-bottom: 5rem
     &__policy
-      margin-top: 0.8rem
-      margin-bottom: 5rem
+      margin-top: 0.7rem
+      margin-bottom: 5.1rem
       &-label
         justify-content: flex-start
         font-size: 1.333rem
         line-height: 1.833rem
+        margin-left: 0.1rem
     &__button
       order: 5
       font-size: 1.25rem
       line-height: 2.166rem
-      padding: 1.12rem 4.25rem
+      padding: 1.1rem 4.25rem
   .video
     &__play
       margin: auto
   .types
     &__card
       margin-bottom: 5rem
+    &-card
+      &__title
+        max-width: 20rem
   .card
     &__icon
       left: -4.5rem
@@ -268,8 +280,6 @@
     font-size: 12px
   .container
     width: 90.5%
-  .section
-    padding: 25px 0
   .col
     &-40
       max-width: 28.3rem
@@ -283,7 +293,10 @@
   .title 
     max-width: 23rem
     font-size: 1.9rem
+    line-height: 2.583rem
   .hero
+    &::after
+     display: none 
     &__scroll-down
       display: none
     &__content
@@ -291,7 +304,7 @@
     &__text
       max-width: 26.5rem
       font-size: 1.5rem
-      margin-bottom: 2.8rem
+      margin-bottom: 2.65rem
     &__button
       display: block
       width: 100%
@@ -307,10 +320,10 @@
       &__heading
         font-size: 1.85rem
       &__image
-        margin-bottom: 3.2rem
+        margin-bottom: 3.3rem
   .projects
+    padding-top: 3rem
     background-color: $lightDark
-    padding-bottom: 25px
     &__title
       margin-bottom: 1.9rem
     &__text
@@ -319,14 +332,14 @@
   .card
     &__text
       max-width: 22.4rem
-      margin-top: -11.8rem
-      padding: 1.79rem 2.4rem 1.79rem 2.4rem
+      margin-top: -12rem
+      padding: 1.75rem 2.4rem 1.79rem 2.55rem
     &__title
       font-size: 1.26rem
     &__item
       line-height: 1.9rem
     &__list
-      margin-bottom: 1.55rem
+      margin-bottom: 1.53rem
     &__icon
       left: -4.5rem
       top: -4.15rem
@@ -346,8 +359,10 @@
       line-height: 1.666rem
     &__pricetag
       padding: 1rem 2.4rem
-      &--size-lg
-        padding: 1rem 3.8rem
+      &--lg
+        padding: 1rem 2.65rem
+      &--md
+        padding: 1rem 2.25rem
   .control
     background: linear-gradient(to bottom, $lightDark 94.2%, $light 5.8%)
     &__section-title
@@ -385,7 +400,7 @@
       margin-top: 6.3rem
   .types
     &__card
-      margin-bottom: 6.5rem
+      margin-bottom: 6.6rem
   .design
     &__image
       margin-bottom: 0.3rem

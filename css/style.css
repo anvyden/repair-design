@@ -361,6 +361,7 @@ template {
   text-transform: uppercase;
   font-size: 0.93rem;
   font-family: 'Futura Demi', sans-serif;
+  font-weight: 500;
   outline: none;
 }
 
@@ -559,6 +560,7 @@ html {
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem;
+  font-weight: normal;
 }
 
 img {
@@ -566,7 +568,7 @@ img {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 4.286rem 0;
 }
 
 .section--dark {
@@ -588,6 +590,7 @@ img {
 
 .section-title__heading {
   font-family: 'Yeseva One', cursive;
+  font-weight: normal;
   text-transform: uppercase;
   font-size: 1.429rem;
   line-height: 138.6%;
@@ -597,6 +600,10 @@ img {
 
 .section-title__heading--primary {
   color: #E3B873;
+}
+
+.section-title__heading--black {
+  color: #181818;
 }
 
 .section-title__word {
@@ -614,6 +621,7 @@ img {
 
 .section-title__text {
   font-size: 1.286rem;
+  font-weight: normal;
   line-height: 2.07rem;
   max-width: 31.57rem;
 }
@@ -662,6 +670,7 @@ img {
   color: #E3B873;
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif;
+  font-weight: 500;
 }
 
 .nav__item {
@@ -683,10 +692,11 @@ img {
 .phone {
   color: #E3B873;
   font-family: 'Futura Demi', sans-serif;
+  font-weight: 500;
 }
 
 .contacts__phone {
-  margin-right: 3.25rem;
+  margin-right: 3rem;
   margin-left: 1rem;
 }
 
@@ -741,7 +751,7 @@ img {
 .hero__text {
   font-size: 1.57rem;
   max-width: 500px;
-  line-height: 135%;
+  line-height: 2.143rem;
   margin: 0;
   margin-bottom: 3.3rem;
 }
@@ -818,7 +828,7 @@ img {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   font-size: 2.857rem;
-  line-height: 1.4;
+  line-height: 3.786rem;
 }
 
 .title--primary {
@@ -856,6 +866,7 @@ img {
 .swiper-slide__heading {
   font-size: 1.285rem;
   line-height: 1.78rem;
+  font-weight: normal;
   font-family: 'Yeseva one', cursive;
   color: #E3B873;
   text-transform: uppercase;
@@ -866,6 +877,7 @@ img {
 .swiper-slide__value {
   display: block;
   font-size: 1.071rem;
+  font-weight: normal;
   line-height: 1.2rem;
 }
 
@@ -910,6 +922,7 @@ img {
 }
 
 .projects {
+  padding-top: 8.95rem;
   padding-bottom: 29.5rem;
 }
 
@@ -935,9 +948,14 @@ img {
   margin: 0 8.5px;
 }
 
+.control {
+  margin-bottom: 1.85rem;
+}
+
 .control__section-title {
   margin-bottom: 2.214rem;
   margin-top: -27.5rem;
+  font-weight: normal;
   padding-left: 0.5rem;
 }
 
@@ -968,10 +986,11 @@ img {
 .control__text {
   max-width: 40rem;
   margin: auto;
-  margin-bottom: 4.55rem;
+  margin-bottom: 4.2rem;
   text-align: center;
+  color: #363636;
   font-size: 1.428rem;
-  line-height: 2.4285rem;
+  line-height: 2.429rem;
 }
 
 .control__text::before {
@@ -1000,11 +1019,36 @@ img {
   flex-basis: 30%;
 }
 
+.control__input-group:first-child {
+  margin-right: 0.6rem;
+}
+
 .control__label {
-  margin-bottom: -3.5px;
+  color: rgba(54, 54, 54, 0.5);
+  margin-bottom: -4px;
 }
 
 .control__input {
+  color: #363636;
+}
+
+.control__input::-webkit-input-placeholder {
+  color: #363636;
+}
+
+.control__input::-moz-placeholder {
+  color: #363636;
+}
+
+.control__input:-ms-input-placeholder {
+  color: #363636;
+}
+
+.control__input::-ms-input-placeholder {
+  color: #363636;
+}
+
+.control__input::placeholder {
   color: #363636;
 }
 
@@ -1012,11 +1056,13 @@ img {
   padding: 1.23rem 4.25rem;
   font-size: 1.071rem;
   box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+  font-weight: 500;
 }
 
 .control__policy {
   flex-basis: 100%;
   margin-top: 1.1rem;
+  color: #181818;
 }
 
 .control__policy-label {
@@ -1030,7 +1076,12 @@ img {
 }
 
 .types__section-title {
-  margin-bottom: 2rem;
+  margin-bottom: 2.15rem;
+}
+
+.types__row {
+  max-width: 88.286rem;
+  margin-left: 0.9rem;
 }
 
 .card__text {
@@ -1039,25 +1090,26 @@ img {
   margin: 0 auto;
   margin-top: -9.3rem;
   background-color: #ffffff;
-  padding: 1.79rem 2.14rem;
+  padding: 1.7rem 2.2rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
 
 .card__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
+  color: #363636;
   line-height: 1.786rem;
   margin-top: 0;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.4rem;
 }
 
 .card__list {
   padding: 0 0 0 1rem;
   margin: 0;
   font-size: 1.07rem;
-  line-height: 1.82rem;
+  line-height: 1.85rem;
   color: #959595;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.6rem;
 }
 
 .card__pricetag {
@@ -1073,13 +1125,22 @@ img {
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
 }
 
-.card__pricetag--size-lg {
-  padding: 1.214rem 5.5rem 1.214rem 2.4rem;
+.card__pricetag--lg {
+  padding: 1.214rem 2.9rem;
+}
+
+.card__pricetag--md {
+  padding: 1.214rem 2.45rem;
 }
 
 .design {
   position: relative;
   background: linear-gradient(to bottom, #ffffff 52.5%, #131313 47.5%);
+}
+
+.design__row {
+  max-width: 88.286rem;
+  margin-left: 0.9rem;
 }
 
 .design__section-title {
@@ -1092,10 +1153,36 @@ img {
 
 .design__text {
   max-width: 53.571rem;
-  margin: 1.3rem auto 3.22rem auto;
+  margin: 1.3rem auto 3.25rem auto;
   text-align: center;
   font-size: 1.429rem;
   line-height: 1.929rem;
+  color: #363636;
+}
+
+.design-card__text {
+  padding: 1.5rem 2.2rem;
+}
+
+.design-card__title {
+  margin-bottom: 0.55rem;
+}
+
+.design-card__list {
+  line-height: 1.857rem;
+  margin-bottom: 2.6rem;
+}
+
+.design-card__list .card__item:nth-child(n + 7) {
+  line-height: 1.92rem;
+}
+
+.design-card__pricetag {
+  padding: 1.214rem 5.4rem 1.214rem 2.4rem;
+}
+
+.design-card__pricetag--lg {
+  padding: 1.214rem 5.8rem 1.214rem 2.4rem;
 }
 
 .team__card {
@@ -1124,6 +1211,7 @@ img {
   text-align: center;
   font-size: 1.429rem;
   line-height: 2.429rem;
+  color: #363636;
 }
 
 .team__description::before {
@@ -1157,7 +1245,7 @@ img {
 
 .team__row {
   margin: 0 auto;
-  max-width: 73.3rem;
+  max-width: 73.2rem;
   margin-bottom: 3.8rem;
   justify-content: space-between;
 }
@@ -1223,8 +1311,33 @@ img {
   margin: auto;
 }
 
+.footer__label {
+  font-weight: normal;
+}
+
 .footer__input {
+  font-weight: normal;
   margin-top: -0.2rem;
+}
+
+.footer__input::-webkit-input-placeholder {
+  font-weight: normal;
+}
+
+.footer__input::-moz-placeholder {
+  font-weight: normal;
+}
+
+.footer__input:-ms-input-placeholder {
+  font-weight: normal;
+}
+
+.footer__input::-ms-input-placeholder {
+  font-weight: normal;
+}
+
+.footer__input::placeholder {
+  font-weight: normal;
 }
 
 .footer__input-group {
@@ -1243,6 +1356,7 @@ img {
 .footer__policy {
   flex-basis: 100%;
   margin-bottom: 3.6rem;
+  font-weight: normal;
 }
 
 .footer__button {
@@ -1487,8 +1601,14 @@ img {
   .swiper-slide__text:last-of-type {
     margin-bottom: 3rem;
   }
+  .types__row {
+    margin-left: 0;
+  }
   .types-card__title {
     max-width: 14.55rem;
+  }
+  .design__row {
+    margin-left: 0;
   }
 }
 
@@ -1533,7 +1653,11 @@ img {
     font-size: 1.166rem;
     line-height: 1.583rem;
   }
+  .section {
+    padding: 2.05rem 0;
+  }
   .section-title__heading {
+    margin-bottom: 1.2rem;
     text-align: center;
   }
   .section-title__text {
@@ -1556,6 +1680,9 @@ img {
     max-width: 35rem;
     text-align: left;
   }
+  .control {
+    margin-bottom: 0.45rem;
+  }
   .control__form {
     max-width: 44.55rem;
     flex-direction: column;
@@ -1573,25 +1700,29 @@ img {
     margin-bottom: 5rem;
   }
   .control__policy {
-    margin-top: 0.8rem;
-    margin-bottom: 5rem;
+    margin-top: 0.7rem;
+    margin-bottom: 5.1rem;
   }
   .control__policy-label {
     justify-content: flex-start;
     font-size: 1.333rem;
     line-height: 1.833rem;
+    margin-left: 0.1rem;
   }
   .control__button {
     order: 5;
     font-size: 1.25rem;
     line-height: 2.166rem;
-    padding: 1.12rem 4.25rem;
+    padding: 1.1rem 4.25rem;
   }
   .video__play {
     margin: auto;
   }
   .types__card {
     margin-bottom: 5rem;
+  }
+  .types-card__title {
+    max-width: 20rem;
   }
   .card__icon {
     left: -4.5rem;
@@ -1753,9 +1884,6 @@ img {
   .container {
     width: 90.5%;
   }
-  .section {
-    padding: 25px 0;
-  }
   .col-40 {
     max-width: 28.3rem;
   }
@@ -1770,6 +1898,10 @@ img {
   .title {
     max-width: 23rem;
     font-size: 1.9rem;
+    line-height: 2.583rem;
+  }
+  .hero::after {
+    display: none;
   }
   .hero__scroll-down {
     display: none;
@@ -1780,7 +1912,7 @@ img {
   .hero__text {
     max-width: 26.5rem;
     font-size: 1.5rem;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.65rem;
   }
   .hero__button {
     display: block;
@@ -1797,11 +1929,11 @@ img {
     font-size: 1.85rem;
   }
   .section-title__image {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.3rem;
   }
   .projects {
+    padding-top: 3rem;
     background-color: #252525;
-    padding-bottom: 25px;
   }
   .projects__title {
     margin-bottom: 1.9rem;
@@ -1812,8 +1944,8 @@ img {
   }
   .card__text {
     max-width: 22.4rem;
-    margin-top: -11.8rem;
-    padding: 1.79rem 2.4rem 1.79rem 2.4rem;
+    margin-top: -12rem;
+    padding: 1.75rem 2.4rem 1.79rem 2.55rem;
   }
   .card__title {
     font-size: 1.26rem;
@@ -1822,7 +1954,7 @@ img {
     line-height: 1.9rem;
   }
   .card__list {
-    margin-bottom: 1.55rem;
+    margin-bottom: 1.53rem;
   }
   .card__icon {
     left: -4.5rem;
@@ -1849,8 +1981,11 @@ img {
   .card__pricetag {
     padding: 1rem 2.4rem;
   }
-  .card__pricetag--size-lg {
-    padding: 1rem 3.8rem;
+  .card__pricetag--lg {
+    padding: 1rem 2.65rem;
+  }
+  .card__pricetag--md {
+    padding: 1rem 2.25rem;
   }
   .control {
     background: linear-gradient(to bottom, #252525 94.2%, #ffffff 5.8%);
@@ -1910,7 +2045,7 @@ img {
     margin-top: 6.3rem;
   }
   .types__card {
-    margin-bottom: 6.5rem;
+    margin-bottom: 6.6rem;
   }
   .design__image {
     margin-bottom: 0.3rem;

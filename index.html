@@ -183,8 +183,8 @@
           <img src="img/play-icon.svg" alt="play icon" class="video__play">
         </div>
         <!-- /.control__video video -->
-        <p class="control__text wow fadeInLeft" data-wow-delay="0.1s">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="send.php" method="POST" class="form control__form wow fadeInRight" data-wow-delay="0.1s">
+        <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+        <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group">
             <label for="control-user-name" class="label form__label control__label">Имя</label>
             <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
@@ -206,7 +206,7 @@
     <section class="section types">
       <div class="container">
         <div class="section-title types__section-title">
-          <h2 class="section-title__heading">Виды ремонта</h2>
+          <h2 class="section-title__heading section-title__heading--black">Виды ремонта</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img src="img/repair.svg" alt="video">
@@ -214,7 +214,7 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
-        <div class="row">
+        <div class="row types__row">
           <div class="col-32">
             <div class="card types__card">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
@@ -238,7 +238,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag">от 900 руб / М<sup>2</sup></strong>
+                <strong class="card__pricetag card__pricetag--lg">от 900 руб / М<sup>2</sup></strong>
               </div>
               <!-- /.card__text -->
             </div>
@@ -298,7 +298,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag">от 4000 руб / М<sup>2</sup></strong>
+                <strong class="card__pricetag card__pricetag--md">от 4000 руб / М<sup>2</sup></strong>
               </div>
               <!-- /.card__text -->
             </div>
@@ -314,7 +314,7 @@
     <section class="section design">
       <div class="container">
         <div class="section-title design__section-title">
-          <h2 class="section-title__heading design__heading">Дизайн проект</h2>
+          <h2 class="section-title__heading section-title__heading--black design__heading">Дизайн проект</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image design__image">
             <img src="img/linear.svg" alt="linear">
@@ -325,14 +325,14 @@
           </p>
         </div>
         <!-- /.section-title -->
-        <div class="row">
+        <div class="row design__row">
           <div class="col-32">
             <div class="card design-card design__card">
               <img src="img/design/design-1.jpg" alt="Минимальный ремонт" class="card__image">
               <div class="card__text design-card__text">
-                <h3 class="card__title">Минимальный</h3>
+                <h3 class="card__title design-card__title">Минимальный</h3>
                 <!-- /.card__title -->
-                <ul class="card__list">
+                <ul class="card__list design-card__list">
                   <li class="card__item">Измерительные чертежи</li>
                   <!-- /.card__item -->
                   <li class="card__item">Перепланировка</li>
@@ -343,7 +343,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag card__pricetag--size-lg">150 руб / М<sup>2</sup></strong>
+                <strong class="card__pricetag design-card__pricetag design-card__pricetag--lg">150 руб / М<sup>2</sup></strong>
               </div>
               <!-- /.card__text -->
             </div>
@@ -353,10 +353,10 @@
           <div class="col-32">
             <div class="card design__card">
               <img src="img/design/design-2.jpg" alt="Стандартный ремонт" class="card__image">
-              <div class="card__text">
-                <h3 class="card__title">Стандартный</h3>
+              <div class="card__text design-card__text">
+                <h3 class="card__title design-card__title">Стандартный</h3>
                 <!-- /.card__title -->
-                <ul class="card__list">
+                <ul class="card__list design-card__list">
                   <li class="card__item">Измерительные чертежи</li>
                   <!-- /.card__item -->
                   <li class="card__item">Перепланировка</li>
@@ -373,7 +373,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag card__pricetag--size-lg">400 руб / М<sup>2</sup></strong>
+                <strong class="card__pricetag design-card__pricetag">400 руб / М<sup>2</sup></strong>
               </div>
               <!-- /.card__text -->
             </div>
@@ -383,10 +383,10 @@
           <div class="col-32">
             <div class="card design__card">
               <img src="img/design/design-3.jpg" alt="Полный ремонт" class="card__image">
-              <div class="card__text">
-                <h3 class="card__title">Полный</h3>
+              <div class="card__text design-card__text">
+                <h3 class="card__title design-card__title">Полный</h3>
                 <!-- /.card__title -->
-                <ul class="card__list">
+                <ul class="card__list design-card__list">
                   <li class="card__item">Измерительные чертежи</li>
                   <!-- /.card__item -->
                   <li class="card__item">Перепланировка</li>
@@ -413,7 +413,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag card__pricetag--size-lg">900 руб / М<sup>2</sup></strong>
+                <strong class="card__pricetag design-card__pricetag">900 руб / М<sup>2</sup></strong>
               </div>
               <!-- /.card__text -->
             </div>
