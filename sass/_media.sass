@@ -26,6 +26,47 @@
         margin-bottom: 1.8rem
         &:last-of-type
           margin-bottom: 6rem
+@media screen and ( min-width: 992px )
+  .button
+    &--primary
+      transition: box-shadow 0.3s
+      &:hover
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
+    &--outline
+      transition: border 0.2s
+      &:hover
+        border: 1px solid $primary
+  .logo
+    &__text
+      transition: color 0.2s
+      &:hover
+        color: $light
+  .nav
+    &__item
+      transition: color 0.2s
+      &:hover
+        color: $primary
+  .instagram
+    &__link
+      transition: color 0.2s
+      &:hover
+        color: $light
+  .hero
+    &__scroll-down
+      transition: color 0.2s
+      &:hover
+        color: $primary
+  .phone
+    transition: color 0.2s
+    &:hover
+      color: $light
+  .contacts
+    &-info
+      &__phone
+        transition: color 0.3s
+        &:hover
+          color: $light
+          text-decoration: underline
 @media screen and ( max-width: 992px )
   html
     font-size: 11px

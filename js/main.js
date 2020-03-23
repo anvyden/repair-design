@@ -83,6 +83,9 @@ $(document).ready(function () {
         idTop = $(id).offset().top;
       $('body, html').animate({scrollTop: idTop}, 1300);
   });
+  $('.logo').on('click', 'a', function(e) {
+      $('body, html').animate({scrollTop: 0}, 1300);
+  });
 
   var mySwiper = new Swiper ('.projects-swiper', {
     loop: true,

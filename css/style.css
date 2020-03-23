@@ -363,21 +363,12 @@ template {
   font-family: 'Futura Demi', sans-serif;
   font-weight: 500;
   outline: none;
-}
-
-.button:hover {
   cursor: pointer;
 }
 
 .button--primary {
   background-color: #E3B873;
   color: #ffffff;
-  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-  transition: box-shadow 0.3s;
-}
-
-.button--primary:hover {
-  box-shadow: none;
 }
 
 .button--outline {
@@ -665,12 +656,13 @@ img {
   align-items: center;
 }
 
-.logo {
+.logo__text {
   font-size: 1rem;
   color: #E3B873;
   text-transform: uppercase;
   font-family: 'Futura Demi', sans-serif;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .nav__item {
@@ -679,10 +671,6 @@ img {
   text-transform: uppercase;
   margin-right: 2.65rem;
   transition: color 0.2s;
-}
-
-.nav__item:hover {
-  color: #E3B873;
 }
 
 .nav__item:last-child {
@@ -1587,6 +1575,58 @@ img {
   }
   .swiper-slide__text:last-of-type {
     margin-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .button--primary {
+    transition: box-shadow 0.3s;
+  }
+  .button--primary:hover {
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  }
+  .button--outline {
+    transition: border 0.2s;
+  }
+  .button--outline:hover {
+    border: 1px solid #E3B873;
+  }
+  .logo__text {
+    transition: color 0.2s;
+  }
+  .logo__text:hover {
+    color: #ffffff;
+  }
+  .nav__item {
+    transition: color 0.2s;
+  }
+  .nav__item:hover {
+    color: #E3B873;
+  }
+  .instagram__link {
+    transition: color 0.2s;
+  }
+  .instagram__link:hover {
+    color: #ffffff;
+  }
+  .hero__scroll-down {
+    transition: color 0.2s;
+  }
+  .hero__scroll-down:hover {
+    color: #E3B873;
+  }
+  .phone {
+    transition: color 0.2s;
+  }
+  .phone:hover {
+    color: #ffffff;
+  }
+  .contacts-info__phone {
+    transition: color 0.3s;
+  }
+  .contacts-info__phone:hover {
+    color: #ffffff;
+    text-decoration: underline;
   }
 }
 
