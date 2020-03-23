@@ -1134,8 +1134,9 @@ img {
 }
 
 .design {
+  padding-bottom: 40rem;
   position: relative;
-  background: linear-gradient(to bottom, #ffffff 52.5%, #131313 47.5%);
+  background: linear-gradient(to bottom, #ffffff 34.5%, #131313 20%);
 }
 
 .design__row {
@@ -1185,6 +1186,11 @@ img {
   padding: 1.214rem 5.8rem 1.214rem 2.4rem;
 }
 
+.team {
+  position: relative;
+  padding-bottom: 26rem;
+}
+
 .team__card {
   position: relative;
 }
@@ -1192,6 +1198,11 @@ img {
 .team__section-title {
   margin-left: 0.2rem;
   margin-bottom: 5.9rem;
+  margin-top: -33.3rem;
+}
+
+.team__heading {
+  color: #ffffff;
 }
 
 .team__image {
@@ -1203,6 +1214,7 @@ img {
   max-width: 32rem;
   font-size: 1.429rem;
   line-height: 1.923rem;
+  color: #ffffff;
 }
 
 .team__description {
@@ -1292,6 +1304,7 @@ img {
   padding: 2.5rem;
   padding-top: 1.1rem;
   margin-bottom: 3.55rem;
+  margin-top: -19rem;
 }
 
 .footer__title {
@@ -1666,6 +1679,10 @@ img {
   .section-title__word::after {
     display: none;
   }
+  .projects {
+    padding-bottom: 29.5rem;
+    background-color: #181818;
+  }
   .projects__title {
     font-size: 1.833rem;
     line-height: 2.5rem;
@@ -1750,9 +1767,10 @@ img {
     margin-left: 0;
   }
   .design {
-    background: #252525;
+    background: #181818;
   }
   .design__heading {
+    margin-bottom: 1.15rem;
     color: #ffffff;
   }
   .design__text {
@@ -1765,11 +1783,12 @@ img {
     margin-bottom: 5rem;
   }
   .team {
-    background-color: #252525;
+    background-color: #181818;
   }
   .team__section-title {
     margin-bottom: 6.8rem;
     margin-left: 0;
+    margin-top: 0;
   }
   .team__heading {
     color: #ffffff;
@@ -1803,23 +1822,32 @@ img {
   .team__card {
     margin-bottom: 9.2rem;
   }
+  .team__card--margin {
+    margin-bottom: 3rem;
+  }
   .team__description {
     display: none;
+  }
+  .team__row {
+    margin-bottom: 0;
   }
   .team__row .col-32:nth-child(3) {
     margin-top: -0.25rem;
   }
   .footer {
-    background: #252525;
+    background: #181818;
+    padding-top: 2.05rem;
   }
   .footer__wrap {
-    background: #252525;
-    padding: 2.5rem 0;
+    background: #181818;
+    padding: 0;
+    margin-top: 0;
   }
   .footer__title {
     font-size: 1.666rem;
     line-height: 2.333rem;
     margin-bottom: 4.1rem;
+    margin-top: 0;
   }
   .footer__form {
     max-width: 44.55rem;
@@ -1850,6 +1878,7 @@ img {
   }
   .footer__button {
     margin: 0;
+    margin-bottom: 2.5rem;
     padding: 1.1rem 4rem;
     font-size: 1.25rem;
     line-height: 2.166rem;
@@ -1933,7 +1962,8 @@ img {
   }
   .projects {
     padding-top: 3rem;
-    background-color: #252525;
+    padding-bottom: 2.05rem;
+    background-color: #181818;
   }
   .projects__title {
     margin-bottom: 1.9rem;
@@ -1988,7 +2018,7 @@ img {
     padding: 1rem 2.25rem;
   }
   .control {
-    background: linear-gradient(to bottom, #252525 94.2%, #ffffff 5.8%);
+    background: linear-gradient(to bottom, #181818 94.2%, #ffffff 5.8%);
   }
   .control__section-title {
     margin-top: 0;
@@ -2048,19 +2078,38 @@ img {
     margin-bottom: 6.6rem;
   }
   .design__image {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0;
   }
   .design__card {
-    margin-bottom: 6.8rem;
+    margin-bottom: 6.65rem;
+  }
+  .design__card--margin {
+    margin-bottom: 3.8rem;
   }
   .design__text {
+    margin-top: 1.6rem;
     margin-bottom: 3.1rem;
   }
+  .design-card__title {
+    margin-bottom: 0.7rem;
+  }
   .design-card__text {
-    padding: 1.75rem 2.4rem;
+    padding: 1.4rem 2.45rem;
+  }
+  .design-card__list {
+    margin-bottom: 1.95rem;
+    line-height: 2rem;
+  }
+  .design-card__pricetag {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding: 0.8rem 3.9rem;
+  }
+  .design-card__pricetag--lg {
+    padding: 0.8rem 4rem;
   }
   .team {
-    background-color: #252525;
+    background-color: #181818;
   }
   .team__section-title {
     margin-bottom: 6.8rem;
@@ -2099,6 +2148,9 @@ img {
   .team__card {
     margin-left: 2.7rem;
     margin-bottom: 9.2rem;
+  }
+  .team__card--margin {
+    margin-bottom: 2rem;
   }
   .team__description {
     display: none;
