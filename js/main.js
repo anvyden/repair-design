@@ -244,149 +244,26 @@ $(document).ready(function () {
     });
 
     // маска для номера телефона
-
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-
-    // yandex карта
-    // var spinner = $('.ymap-container').children('.loader');
-    // var check_if_load = false;
-    // var myMap, myPlacemark;
-
+    
     // создание yandex карты
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map('map', {
-              center: [47.244729, 39.723187],
-              zoom: 13
-          }, {
-              searchControlProvider: 'yandex#search'
-          }),
-  
-          // Создаём макет содержимого.
-          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-              '<div style="color: #FFFFFF; width: 100%; height: 100%; font-weight: bold;">$[properties.iconContent]</div>'
-          ),
-  
-          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'Наш офис',
-              balloonContent: 'Турецкий ремонт квартир'
-          }, {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: 'default#image',
-              // Своё изображение иконки метки.
-              iconImageHref: 'img/location.png',
-              // Размеры метки.
-              iconImageSize: [32, 32],
-              // Смещение левого верхнего угла иконки относительно
-              // её "ножки" (точки привязки).
-              iconImageOffset: [-5, -38]
-          });
-
-      myMap.behaviors.disable('scrollZoom')
-      myMap.geoObjects.add(myPlacemark)
-  });
-    let map_container = document.getElementById('map');
-    let options_map = {
-        once: true, //once start, thereafter destroy listener
-        passive: true,
-        capture: true
-    };
-    map_container.addEventListener('click', start_lazy_map, options_map);
-    map_container.addEventListener('mouseover', start_lazy_map, options_map);
-    map_container.addEventListener('touchstart', start_lazy_map, options_map);
-    map_container.addEventListener('touchmove', start_lazy_map, options_map);
-    let map_loaded = false;
-    function start_lazy_map() {
-        if (!map_loaded) {
-            let map_block = document.getElementById('ymap_lazy');
-            map_loaded = true;
-            map_block.setAttribute('src', map_block.getAttribute('data-src'));
-            map_block.removeAttribute('data_src');
-            console.log('YMAP LOADED');
-        }
-    }
-
-  // var layer = myMap.layers.get(0).get(0);
-  // waitForTilesLoad(layer).then(function() {
-  //   spinner.removeClass('is-active');
-  // });
-  // function waitForTilesLoad(layer) {
-  //   return new ymaps.vow.Promise(function (resolve, reject) {
-  //     var tc = getTileContainer(layer), readyAll = true;
-  //     tc.tiles.each(function (tile, number) {
-  //       if (!tile.isReady()) {
-  //         readyAll = false;
-  //       }
-  //     });
-  //     if (readyAll) {
-  //       resolve();
-  //     } else {
-  //       tc.events.once("ready", function() {
-  //         resolve();
-  //       });
-  //     }
-  //   });
-  // }
-  // function getTileContainer(layer) {
-  //   for (var k in layer) {
-  //     if (layer.hasOwnProperty(k)) {
-  //       if (
-  //         layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
-  //         || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
-  //       ) {
-  //         return layer[k];
-  //       }
-  //     }
-  //   }
-  //   return null;
-  // }
-  // // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
-  // function loadScript(url, callback){
-  //   var script = document.createElement("script");
-  
-  //   if (script.readyState){  // IE
-  //     script.onreadystatechange = function(){
-  //       if (script.readyState == "loaded" ||
-  //               script.readyState == "complete"){
-  //         script.onreadystatechange = null;
-  //         callback();
-  //       }
-  //     };
-  //   } else {  // Другие браузеры
-  //     script.onload = function(){
-  //       callback();
-  //     };
-  //   }
-  
-  //   script.src = url;
-  //   document.getElementsByTagName("head")[0].appendChild(script);
-  // }
-  // // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
-  // var ymap = function() {
-  //   $('.ymap-container').mouseenter(function(){
-  //       if (check_if_load == 0) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
-  
-  //       // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
-  //         check_if_load = 1; 
-  
-  //     // Показываем индикатор загрузки до тех пор, пока карта не загрузится
-  //         spinner.addClass('is-active');
-  
-  //     // Загружаем API Яндекс.Карт
-  //         loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
-  //           // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
-  //           ymaps.load(init);
-  //         });                
-  //       }
-  //     }
-  //   );  
-  // }
-  
-  // $(function() {
-  
-  //   //Запускаем основную функцию
-  //   ymap();
-  
-  // });
-
+    
+    YaMapsShown = false; 
+    $(document).ready(function (){
+      $(window).scroll(function() {
+         if (!YaMapsShown){
+          if($(window).scrollTop() + $(window).height() > $(document).height() - 700) {      
+           showYaMaps();
+           YaMapsShown = true;
+          }
+         }
+      });
+      
+     });
+     function showYaMaps(){
+      var script   = document.createElement("script");
+      script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aadaefd3a68216182e1677916ac13b4dc233d108d3d83352f784fe6ff083004cb&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
+      document.getElementById("map").appendChild(script);
+     }
+     
 });

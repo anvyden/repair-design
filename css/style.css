@@ -916,6 +916,7 @@ img {
 .projects {
   padding-top: 8.95rem;
   padding-bottom: 29.5rem;
+  background: #131313 url(../img/bg-lines.png) no-repeat center/cover;
 }
 
 .projects__row {
@@ -1284,19 +1285,23 @@ img {
   color: #ffffff;
 }
 
+.team-bg-lines {
+  background: url("../img/team-bg-lines.png") no-repeat center/cover;
+}
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem;
 }
 
 .footer__wrap {
-  background-color: #181818;
   max-width: 63.071rem;
   margin: auto;
   padding: 2.5rem;
   padding-top: 1.1rem;
   margin-bottom: 3.55rem;
   margin-top: -19rem;
+  background: #181818 url("../img/modal-bg-lines.png") no-repeat center/cover;
 }
 
 .footer__title {
@@ -1382,13 +1387,15 @@ img {
 }
 
 .footer__map {
-  background: url("../img/yandex-before-load-marker.png") #ffffff no-repeat;
-  background-position: center center;
-  background-size: cover;
+  z-index: 100;
   margin-bottom: 3.85rem;
   width: 100%;
+  height: 465px;
   max-width: 66.071rem;
   min-height: 33.214rem;
+  background-color: transparent;
+  background: url("../img/yandex-before-load-marker.png") #ffffff no-repeat;
+  background-position: center center;
 }
 
 .contacts-info__text {
@@ -1451,7 +1458,7 @@ img {
 .modal__dialog {
   position: relative;
   max-width: 36.143rem;
-  background: #131313 url("../img/bg-lines.svg") no-repeat center/cover;
+  background: #131313 url("../img/modal-bg-lines.png") no-repeat center/cover;
   padding: 2.357rem 3.5rem 1.929rem 3.5rem;
   color: #ffffff;
 }
@@ -2250,11 +2257,15 @@ img {
   .footer__map {
     order: -2;
     max-width: 28.333rem;
+    height: 255px;
     min-height: 21.25rem;
     margin-bottom: 3.3rem;
   }
   .footer__menu {
     display: none;
+  }
+  .ymaps-2-1-76-map {
+    height: 255px !important;
   }
   .contacts-info__text {
     max-width: 27rem;
