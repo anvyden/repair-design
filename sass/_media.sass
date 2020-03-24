@@ -94,14 +94,27 @@
     &-card
       &__title
         max-width: 14.55rem
+  .card
+    &__text
+      padding: 1rem 1.5rem
+    &__title
+      font-size: 1.1rem
+    &__list
+      font-size: 0.9rem
   .design
     &__row
       margin-left: 0
+  .team
+    &-card
+      &__text
+        padding: 0
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
     align-items: center
   .col
+    &-32
+      max-width: 100%
     &-40
       width: 100%
       max-width: 35rem
@@ -144,7 +157,7 @@
           display: none
   .projects
     padding-bottom: 29.5rem
-    background-color: $black
+    background: $black
     &__title
       font-size: 1.833rem
       line-height: 2.5rem
@@ -189,12 +202,17 @@
     &__play
       margin: auto
   .types
+    background: $light
     &__card
       margin-bottom: 5rem
     &-card
       &__title
         max-width: 20rem
   .card
+    &__title
+      font-size: 1.29rem
+    &__list
+      font-size: 1.07rem
     &__icon
       left: -4.5rem
       top: -4.15rem
@@ -213,6 +231,7 @@
       font-size: 1.083rem
       line-height: 1.666rem
     &__text
+      padding: 1.7rem 2.2rem
       margin-left: 0
   .design
     background: $black
@@ -582,7 +601,8 @@
     justify-content: flex-start
     &__scroll-down
       padding: 2.5rem 0
-// overflow: scroll
-
-
+  .instagram
+    &__link
+      position: absolute
+      top: 50%
   

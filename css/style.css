@@ -528,6 +528,10 @@ input.invalid {
   align-items: center;
 }
 
+.col-32 {
+  max-width: 32.5%;
+}
+
 .col-40 {
   width: 40%;
 }
@@ -1076,6 +1080,10 @@ img {
 .types__row {
   max-width: 88.286rem;
   margin-left: 0.9rem;
+}
+
+.types-bg-lines {
+  background: #ffffff url("../img/team-bg-lines.png") no-repeat center/cover;
 }
 
 .card__text {
@@ -1710,8 +1718,20 @@ img {
   .types-card__title {
     max-width: 14.55rem;
   }
+  .card__text {
+    padding: 1rem 1.5rem;
+  }
+  .card__title {
+    font-size: 1.1rem;
+  }
+  .card__list {
+    font-size: 0.9rem;
+  }
   .design__row {
     margin-left: 0;
+  }
+  .team-card__text {
+    padding: 0;
   }
 }
 
@@ -1719,6 +1739,9 @@ img {
   .row {
     flex-direction: column;
     align-items: center;
+  }
+  .col-32 {
+    max-width: 100%;
   }
   .col-40 {
     width: 100%;
@@ -1771,7 +1794,7 @@ img {
   }
   .projects {
     padding-bottom: 29.5rem;
-    background-color: #181818;
+    background: #181818;
   }
   .projects__title {
     font-size: 1.833rem;
@@ -1825,11 +1848,20 @@ img {
   .video__play {
     margin: auto;
   }
+  .types {
+    background: #ffffff;
+  }
   .types__card {
     margin-bottom: 5rem;
   }
   .types-card__title {
     max-width: 20rem;
+  }
+  .card__title {
+    font-size: 1.29rem;
+  }
+  .card__list {
+    font-size: 1.07rem;
   }
   .card__icon {
     left: -4.5rem;
@@ -1854,6 +1886,7 @@ img {
     line-height: 1.666rem;
   }
   .card__text {
+    padding: 1.7rem 2.2rem;
     margin-left: 0;
   }
   .design {
@@ -2329,5 +2362,9 @@ img {
   }
   .hero__scroll-down {
     padding: 2.5rem 0;
+  }
+  .instagram__link {
+    position: absolute;
+    top: 50%;
   }
 }

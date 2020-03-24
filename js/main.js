@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop : 0}, 1300);
   });
 
-  $('.nav').on('click', 'a', function(e) {
+  $('.nav, .hero').on('click', 'a', function(e) {
     e.preventDefault();
     var id = $(this).attr('href'),
         idTop = $(id).offset().top;
@@ -247,7 +247,7 @@ $(document).ready(function () {
     });
 
     // маска для номера телефона
-    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+    $('[type=tel]').mask('+7(000) 000-00-00');
     
     // создание yandex карты
     
