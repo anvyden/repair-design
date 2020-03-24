@@ -1066,6 +1066,7 @@ img {
   position: relative;
   margin: auto;
   margin-top: 10.6rem;
+  cursor: pointer;
 }
 
 .types__section-title {
@@ -1447,7 +1448,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
 }
 
 .modal--visible {
@@ -2290,6 +2290,36 @@ img {
 @media screen and (max-height: 530px) {
   .hero__scroll-down {
     display: none;
+  }
+  .modal {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .hero::after {
+    display: none;
+  }
+  .modal__input-group {
+    margin-bottom: 1.7rem;
+  }
+  .modal__policy {
+    margin-bottom: 1rem;
+  }
+  .modal__dialog {
+    max-width: 36.143rem;
+    padding: 1rem 3rem 1rem 3rem;
+  }
+  .modal__close {
+    width: 28px;
+    height: 28px;
+    margin: 5px;
+  }
+  .modal__title {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+    max-width: 20rem;
   }
 }
 

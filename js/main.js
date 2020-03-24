@@ -145,6 +145,7 @@ $(document).ready(function () {
             if ($('.thanks').hasClass('thanks--visible')) {
               modal.removeClass('modal--visible');
             }
+            ym(61243786,'reachGoal','submitForm'); return true;
           }
         });
       },
@@ -195,6 +196,7 @@ $(document).ready(function () {
             if ($('.thanks').hasClass('thanks--visible')) {
               modal.removeClass('modal--visible');
             }
+            ym(61243786,'reachGoal','submitForm'); return true;
           }
         });
       },
@@ -238,6 +240,7 @@ $(document).ready(function () {
             if ($('.thanks').hasClass('thanks--visible')) {
               modal.removeClass('modal--visible');
             }
+            ym(61243786,'reachGoal','submitForm'); return true;
           }
         });
       },
@@ -265,5 +268,22 @@ $(document).ready(function () {
       script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aadaefd3a68216182e1677916ac13b4dc233d108d3d83352f784fe6ff083004cb&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
       document.getElementById("map").appendChild(script);
      }
+    
+     // создание видео
+     var player;
+     $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '341',
+        width: '100%',
+        videoId: 'RHzzLqJWqHs',
+        events: {
+          'onReady': videoPlay,
+        }
+      });
+    })
      
+    function videoPlay(event) {
+      event.target.playVideo();
+    }
+
 });

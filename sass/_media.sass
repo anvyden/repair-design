@@ -554,17 +554,35 @@
   .hero
     &__scroll-down
       display: none
+  .modal
+    overflow: scroll
+@media screen and ( max-height: 450px )
+  .hero
+    &::after
+      display: none
+  .modal
+    &__input-group
+      margin-bottom: 1.7rem
+    &__policy
+      margin-bottom: 1rem
+    &__dialog
+      max-width: 36.143rem
+      padding: 1rem 3rem 1rem 3rem
+    &__close
+      width: 28px
+      height: 28px
+      margin: 5px
+    &__title
+      font-size: 1.1rem
+      line-height: 1.4rem
+      margin-bottom: 0.5rem
+      max-width: 20rem
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
   .hero
     justify-content: flex-start
     &__scroll-down
       padding: 2.5rem 0
-// @-moz-document url-prefix()
-//   input[type=text], input[type=tel], input[type=email]
-//     color: $light
-//   .control__input
-//     input[type=text], input[type=tel]
-//       color: $darkText
+// overflow: scroll
 
 
   
