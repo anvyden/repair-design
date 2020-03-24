@@ -75,6 +75,18 @@ $(document).ready(function () {
   var prev = $('.projects-swiper-button-prev');
   var bullets = $('.projects-pagination');
 
+  $(window).resize(function () {
+      if ($(window).width() <= 570) {
+        $('.swiper-slide__img').each(function () {
+          $(this).attr('src', 'img/project/project-mobile.jpg');
+          });
+      } else {
+        $('.swiper-slide__img').each(function () {
+          $(this).attr('src', 'img/project/project.jpg');
+          });
+      }
+      });
+
   var mql = window.matchMedia('all and (max-width: 570px)');
     if (mql.matches) {
       $('.swiper-slide__img').each(function () {
