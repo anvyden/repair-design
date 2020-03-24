@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ab8d2379-f0eb-45bc-a85b-2fe4bab5e946&lang=ru_RU"></script>
+  <script id="ymap_lazy" data-skip-moving="true" async="" src="https://api-maps.yandex.ru/2.1/?apikey=ab8d2379-f0eb-45bc-a85b-2fe4bab5e946&lang=ru_RU"></script>
   <title>Турецкий Ремонт</title>
 </head>
 <body>
@@ -542,7 +542,10 @@
             </a>
           </div>
         </div>
-        <div class="map footer__map" id="map"></div>
+        <div class="ymap-container"></div>
+          <div class="loader loader-default"></div>
+          <div class="map footer__map" id="map"></div>
+        </div>
         <!-- /.map -->
       </div>
     </div>

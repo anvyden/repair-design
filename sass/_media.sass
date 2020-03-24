@@ -209,7 +209,7 @@
       line-height: 2.166rem
     &__experience
       min-width: 19.416rem
-      max-heiht: 3.666rem
+      max-height: 3.666rem
       font-size: 1.083rem
       line-height: 1.666rem
     &__text
@@ -551,4 +551,17 @@
   .hero
     &__scroll-down
       display: none
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+  .hero
+    justify-content: flex-start
+    &__scroll-down
+      padding: 2.5rem 0
+// @-moz-document url-prefix()
+//   input[type=text], input[type=tel], input[type=email]
+//     color: $light
+//   .control__input
+//     input[type=text], input[type=tel]
+//       color: $darkText
+
+
   

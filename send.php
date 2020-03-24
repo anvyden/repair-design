@@ -1,5 +1,5 @@
 <?php
-$mail->CharSet = "UTF-8"
+
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
@@ -23,11 +23,10 @@ try {
     $mail->Password   = 'odrMn4TS';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
-
+    $mail->CharSet = "UTF-8";
     //Recipients
     $mail->setFrom('denis.quesadillias4@gmail.com');
     $mail->addAddress('anvyden@gmail.com');     // Add a recipient
-
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';

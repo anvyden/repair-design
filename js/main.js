@@ -1,32 +1,3 @@
-/*
-document.addEventListener("DOMContentLoaded", function(event) { 
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  const modalDialog = document.querySelector('.modal__dialog');
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  }
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-    });
-
-  closeBtn.addEventListener('click', switchModal);
-
-  modal.addEventListener('click', (event) => {
-    if((event.target).closest('.modal__dialog'))
-    event.stopPropagation();
-    else if((event.target).closest('.modal'))
-    modal.classList.remove('modal--visible');
-  })
-
-  document.addEventListener('keydown', (event) => {
-    if (event.keyCode === 27)
-    modal.classList.remove('modal--visible');
-  })
-  
-});
-*/
 
 $(document).ready(function () {
   var modal = $('.modal'),
@@ -99,57 +70,22 @@ $(document).ready(function () {
     },
   });
     
-  // $(window).resize(function() {
-  //   if ($(window).width() <= 760) {
-  //     $('.col-60').removeClass('.col-60--top');
-  //   };
-  // });
 
   var next = $('.projects-swiper-button-next');
   var prev = $('.projects-swiper-button-prev');
   var bullets = $('.projects-pagination');
 
-  // next.css('left', prev.width() + 20 + bullets.width() + 20)
-  // bullets.css('left', prev.css('left') + prev.width() + 20)
-  
-  // Способ перемещения блока из другого блока при определенном разрешении
-  // $(window).resize(function () {
-  //   if($(window).width() <= 760) {
-  //     $('.swiper-container-mobile').detach().prependTo('.col-60-mobile');
-  //   } else {
-  //       $('.col-60').append($('.swiper-container-mobile'));
-  //     }
-
-  // });
   var mql = window.matchMedia('all and (max-width: 570px)');
-  // $(window).resize(function () {
     if (mql.matches) {
-      // $('.projects__section-title').after($('.swiper-container-mobile')),
       $('.swiper-slide__img').each(function () {
         $(this).attr('src', 'img/project/project-mobile.jpg');
         });
-      // $('.swiper-slide__img').attr.each('src', 'img/project/project-mobile.jpg');
     } else {
-      // $('.col-60').append($('.swiper-container-mobile'));
       $('.swiper-slide__img').each(function () {
         $(this).attr('src', 'img/project/project.jpg');
         });
     }
 
-  // $(window).resize(function () {
-  //   if ($(window).width() <= 560) {
-  //     // $('.projects__section-title').after($('.swiper-container-mobile')),
-  //     $('.swiper-slide__img').each(function () {
-  //       $(this).attr('src', 'img/project/project-mobile.jpg');
-  //       });
-  //     // $('.swiper-slide__img').attr.each('src', 'img/project/project-mobile.jpg');
-  //   } else {
-  //     // $('.col-60').append($('.swiper-container-mobile'));
-  //     $('.swiper-slide__img').each(function () {
-  //       $(this).attr('src', 'img/project/project.jpg');
-  //       });
-  //   }
-  //   });
 
     var positionPrev = prev.position();
 
@@ -158,29 +94,6 @@ $(document).ready(function () {
    
     new WOW().init();
 
-    // animation visibility
-
-    // var typesCard = $('.types__card');
-    // var typesHeight = $('.header').height() + $(".hero").height() + $('.projects').height()
-    //   + $('.control').height() - 200;
-
-    // $(window).scroll(function() {
-    //   if ($(this).scrollTop() >= typesHeight && $(window).width() >= 760)
-    //   typesCard.addClass("animation-fade-up");
-    // });
-
-    // Анимация секции types на мобильной версии
-    // var typesCardEven = $('.types__card:even');
-    // var typesCardOdd = $('.types__card:odd');
-
-    // $(window).scroll(function() {
-    //   if ($(this).scrollTop() >= typesHeight && $(window).width() <= 760)
-    //   typesCardEven.addClass("animation-fade-left");
-    // });
-    // $(window).scroll(function() {
-    //   if ($(this).scrollTop() >= typesHeight && $(window).width() <= 760)
-    //   typesCardOdd.addClass("animation-fade-right");
-    // });
 
     // Валидация формы
     $('.modal__form').validate({
@@ -334,6 +247,11 @@ $(document).ready(function () {
 
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
+    // yandex карта
+    // var spinner = $('.ymap-container').children('.loader');
+    // var check_if_load = false;
+    // var myMap, myPlacemark;
+
     // создание yandex карты
     ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
@@ -365,8 +283,110 @@ $(document).ready(function () {
           });
 
       myMap.behaviors.disable('scrollZoom')
-      myMap.geoObjects
-          .add(myPlacemark)
+      myMap.geoObjects.add(myPlacemark)
   });
+    let map_container = document.getElementById('map');
+    let options_map = {
+        once: true, //once start, thereafter destroy listener
+        passive: true,
+        capture: true
+    };
+    map_container.addEventListener('click', start_lazy_map, options_map);
+    map_container.addEventListener('mouseover', start_lazy_map, options_map);
+    map_container.addEventListener('touchstart', start_lazy_map, options_map);
+    map_container.addEventListener('touchmove', start_lazy_map, options_map);
+    let map_loaded = false;
+    function start_lazy_map() {
+        if (!map_loaded) {
+            let map_block = document.getElementById('ymap_lazy');
+            map_loaded = true;
+            map_block.setAttribute('src', map_block.getAttribute('data-src'));
+            map_block.removeAttribute('data_src');
+            console.log('YMAP LOADED');
+        }
+    }
+
+  // var layer = myMap.layers.get(0).get(0);
+  // waitForTilesLoad(layer).then(function() {
+  //   spinner.removeClass('is-active');
+  // });
+  // function waitForTilesLoad(layer) {
+  //   return new ymaps.vow.Promise(function (resolve, reject) {
+  //     var tc = getTileContainer(layer), readyAll = true;
+  //     tc.tiles.each(function (tile, number) {
+  //       if (!tile.isReady()) {
+  //         readyAll = false;
+  //       }
+  //     });
+  //     if (readyAll) {
+  //       resolve();
+  //     } else {
+  //       tc.events.once("ready", function() {
+  //         resolve();
+  //       });
+  //     }
+  //   });
+  // }
+  // function getTileContainer(layer) {
+  //   for (var k in layer) {
+  //     if (layer.hasOwnProperty(k)) {
+  //       if (
+  //         layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
+  //         || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+  //       ) {
+  //         return layer[k];
+  //       }
+  //     }
+  //   }
+  //   return null;
+  // }
+  // // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
+  // function loadScript(url, callback){
+  //   var script = document.createElement("script");
+  
+  //   if (script.readyState){  // IE
+  //     script.onreadystatechange = function(){
+  //       if (script.readyState == "loaded" ||
+  //               script.readyState == "complete"){
+  //         script.onreadystatechange = null;
+  //         callback();
+  //       }
+  //     };
+  //   } else {  // Другие браузеры
+  //     script.onload = function(){
+  //       callback();
+  //     };
+  //   }
+  
+  //   script.src = url;
+  //   document.getElementsByTagName("head")[0].appendChild(script);
+  // }
+  // // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
+  // var ymap = function() {
+  //   $('.ymap-container').mouseenter(function(){
+  //       if (check_if_load == 0) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+  
+  //       // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+  //         check_if_load = 1; 
+  
+  //     // Показываем индикатор загрузки до тех пор, пока карта не загрузится
+  //         spinner.addClass('is-active');
+  
+  //     // Загружаем API Яндекс.Карт
+  //         loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
+  //           // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+  //           ymaps.load(init);
+  //         });                
+  //       }
+  //     }
+  //   );  
+  // }
+  
+  // $(function() {
+  
+  //   //Запускаем основную функцию
+  //   ymap();
+  
+  // });
 
 });
