@@ -47,12 +47,18 @@ $(document).ready(function () {
   $('.button-up').click(function() {
     $('html, body').stop().animate({scrollTop : 0}, 1300);
   });
-
   $('.nav__item, .hero__scroll-down').on('click', function(e) {
     e.preventDefault();
     var id = $(this).attr('href'),
         idTop = $(id).offset().top;
       $('body, html').animate({scrollTop: idTop}, 1300);
+  });
+  $('#team-link').on('click', function(e) {
+    e.preventDefault();
+    var idTeam = $(this).attr('href'),
+        idTeamTop = $(idTeam).offset().top;
+        idTeamTopBack = idTeamTop + 70;
+      $('body, html').animate({scrollTop: idTeamTopBack}, 500);
   });
   $('.logo').on('click', 'a', function(e) {
       $('body, html').animate({scrollTop: 0}, 1300);

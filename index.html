@@ -26,7 +26,7 @@
           <a href="#main" class="nav__item">Главная</a>
           <a href="#projects" class="nav__item">Проекты</a>
           <a href="#" class="nav__item">Замер</a>
-          <a href="#team" class="nav__item">Команда</a>
+          <a href="#team" class="nav__item" id="team-link">Команда</a>
           <a href="#" class="nav__item">Отзывы</a>
           <a href="#contacts" class="nav__item">Контакты</a>
         </nav>
@@ -424,7 +424,7 @@
                     <!-- /.card__item -->
                   </ul>
                   <!-- /.card__list -->
-                  <strong class="card__pricetag design-card__pricetag">900 руб / М<sup>2</sup></strong>
+                  <strong class="card__pricetag design-card__pricetag" id="team">900 руб / М<sup>2</sup></strong>
                 </div>
                 <!-- /.card__text -->
               </div>
@@ -438,7 +438,7 @@
       </section>
       <section class="section team">
         <div class="container">
-          <div class="section-title team__section-title" id="team">
+          <div class="section-title team__section-title">
             <h2 class="section-title__heading team__heading">Наша команда</h2>
             <!-- /.section-title__heading -->
             <div class="section-title__image team__image">
@@ -535,10 +535,10 @@
             <label for="footer__policy-checkbox" class="policy__label policy__label--left policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
-          <button class="button button--primary footer__button button--size-lg">Отправить</button>
+          <button class="button button--primary footer__button button--size-lg" id="contacts">Отправить</button>
         </form>
       </div>
-      <div class="footer__info" id="contacts">
+      <div class="footer__info">
         <div class="contacts-info">
           <p class="contacts-info__text">
             Ростов на дону, Торговый центр Plaza Прямой телефон<a href="tel:+79997683299" class="contacts-info__phone"> +7 (999) 768-32-99</a>
@@ -621,7 +621,7 @@
       <p class="thanks__group">Вы можете подписаться <a href="https://vk.com/glo_academy" target="_blank" class="thanks__VK">на нашу группу в VK</a></p>
     </div>
   </div>
-  <button class="button-up">Наверх</button>
+  <button class="button-up"></button>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
