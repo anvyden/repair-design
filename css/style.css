@@ -2327,6 +2327,24 @@ img {
     width: 3.25rem;
     height: 3.25rem;
   }
+  .modal__input-group {
+    margin-bottom: 2rem;
+  }
+  .modal__dialog {
+    width: 95%;
+    max-width: 33rem;
+    padding: 2.357rem 3rem 1.929rem 3rem;
+  }
+  .modal__title {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    max-width: 20rem;
+  }
+  .modal__close {
+    margin: 7px;
+  }
 }
 
 @media screen and (max-height: 530px) {
@@ -2372,7 +2390,7 @@ img {
   .hero__scroll-down {
     padding: 2.5rem 0;
   }
-  .instagram__link {
+  .instagram__link::after {
     position: absolute;
     top: 50%;
   }

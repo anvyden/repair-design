@@ -571,6 +571,21 @@
         img
           width: 3.25rem
           height: 3.25rem
+  .modal
+    &__input-group
+      margin-bottom: 2rem
+    &__dialog
+      width: 95%
+      max-width: 33rem
+      padding: 2.357rem 3rem 1.929rem 3rem
+    &__title
+      font-size: 1.1rem
+      line-height: 1.4rem
+      margin: auto
+      margin-bottom: 2rem
+      max-width: 20rem
+    &__close
+      margin: 7px
 @media screen and ( max-height: 530px )
   .hero
     &__scroll-down
@@ -605,6 +620,7 @@
       padding: 2.5rem 0
   .instagram
     &__link
-      position: absolute
-      top: 50%
+      &::after
+        position: absolute
+        top: 50%
   
