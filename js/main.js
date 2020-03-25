@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop : 0}, 1300);
   });
 
-  $('.nav, .hero').on('click', 'a', function(e) {
+  $('.nav__item, .hero__scroll-down').on('click', function(e) {
     e.preventDefault();
     var id = $(this).attr('href'),
         idTop = $(id).offset().top;
